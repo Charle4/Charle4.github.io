@@ -5,14 +5,25 @@
     <loc>/</loc>
     <lastmod>2023-02-07T14:58:37+08:00</lastmod>
   </url><url>
-    <loc>/post/test/</loc>
-    <lastmod>2023-02-07T14:58:37+08:00</lastmod>
-  </url><url>
     <loc>/post/</loc>
     <lastmod>2023-02-07T14:58:37+08:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>/post/test/</loc>
+    <lastmod>2023-02-07T14:58:37+08:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>/about/</loc>
+    <lastmod>2023-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/contact/</loc>
+    <lastmod>2023-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/archives/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/%E6%A0%87%E7%AD%BE/</loc>
+  </url><url>
+    <loc>/%E5%88%86%E7%B1%BB/</loc>
+  </url><url>
+    <loc>/%E7%B3%BB%E5%88%97/</loc>
   </url>
 </urlset>

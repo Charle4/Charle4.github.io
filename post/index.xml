@@ -5,16 +5,16 @@
     <link>/post/</link>
     <description>Recent content in Posts on Charles IV</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh</language>
     <lastBuildDate>Tue, 07 Feb 2023 14:58:37 +0800</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Blog</title>
+      <title>The Test Blog</title>
       <link>/post/test/</link>
       <pubDate>Tue, 07 Feb 2023 14:58:37 +0800</pubDate>
       
       <guid>/post/test/</guid>
-      <description>My First Blog My First Blog
-$a^2+b^2=c^2$.</description>
+      <description>Test This is a test blog.
+$$ a^2+b^2=c^2. $$</description>
     </item>
     
   </channel>
