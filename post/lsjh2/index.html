@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready text-sm lg:text-base"
+  style="--bg: #faf6f1"
+  lang="zh"
+>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>剖分正方形为奇数个等面积的三角形 - Charles IV</title>
+
+  
+  <meta name="theme-color" />
+  
+  <meta name="description" content="知乎链接: 剖分正方形为奇数个等面积的三角形.
+问题的背景 如果要把一个正方形剖分成面积相等的 $n$ 个三角形. 当 $n$ 是偶数时, 这是容易实现的. 比如说, 先把正方形平分为 $\dfrac{n}{2}$​ 个矩形, 再在分出来每个矩形里面画一条对角线 (如下图). 而 $n$ 是奇数时, 是否有可能将一个正方形平分为 $n$ 个面积相等的三角形?
+这个问题在 1965 年被 Fred Richman 提出: 能否将一个正方形剖分成奇数个面积相等的三角形? 1968 年, John Thomas 证明了顶点为 $(0,0), (0,1), (1,0), (1,1)$ 的正方形不能剖分成奇数个面积相等的所有顶点都具有奇数分母的有理坐标的三角形. 直到 1970 年, Paul Monsky 才最终解决了这个问题: 将一个正方形剖分为奇数个等面积的三角形是不可能的!
+这个看似是欧氏几何中的经典题目, 答案早已为人所知的 &ldquo;简单问题&rdquo; 在五十多年前才得到证明, 在证明里还用到了域的赋值理论等较为高等的工具!
+证明准备 序关系 Definition (偏序) 称集合 $S$ 上的关系 $\leqslant$ 为偏序 (partial order) 关系, 如果它满足:
+(1) 自反性: 对任意 $a \in S$, $a \leqslant a$;" />
+  <meta
+    name="author"
+    content=""
+  />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="/main.min.css" />
+
+  
+  <script
+    defer
+    src="highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+   
+  <link rel="preload" as="image" href="theme.png" />
+
+  
+  
+  
+  <link rel="preload" as="image" href="https://cdn.staticaly.com/gh/Charle4/Image-Hosting-Service@main/20230207/image.49gxhl9trh60.jpg" />
+  
+  
+
+  
+  <link rel="preload" as="image" href="github.svg" />
+  
+  <link rel="preload" as="image" href="rss.svg" />
+  
+
+  
+  <link rel="icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.110.0">
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="剖分正方形为奇数个等面积的三角形" />
+<meta property="og:description" content="知乎链接: 剖分正方形为奇数个等面积的三角形.
+问题的背景 如果要把一个正方形剖分成面积相等的 $n$ 个三角形. 当 $n$ 是偶数时, 这是容易实现的. 比如说, 先把正方形平分为 $\dfrac{n}{2}$​ 个矩形, 再在分出来每个矩形里面画一条对角线 (如下图). 而 $n$ 是奇数时, 是否有可能将一个正方形平分为 $n$ 个面积相等的三角形?
+这个问题在 1965 年被 Fred Richman 提出: 能否将一个正方形剖分成奇数个面积相等的三角形? 1968 年, John Thomas 证明了顶点为 $(0,0), (0,1), (1,0), (1,1)$ 的正方形不能剖分成奇数个面积相等的所有顶点都具有奇数分母的有理坐标的三角形. 直到 1970 年, Paul Monsky 才最终解决了这个问题: 将一个正方形剖分为奇数个等面积的三角形是不可能的!
+这个看似是欧氏几何中的经典题目, 答案早已为人所知的 &ldquo;简单问题&rdquo; 在五十多年前才得到证明, 在证明里还用到了域的赋值理论等较为高等的工具!
+证明准备 序关系 Definition (偏序) 称集合 $S$ 上的关系 $\leqslant$ 为偏序 (partial order) 关系, 如果它满足:
+(1) 自反性: 对任意 $a \in S$, $a \leqslant a$;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/lsjh2/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-07-19T12:42:44+08:00" />
+<meta property="article:modified_time" content="2023-07-19T12:42:44+08:00" />
+
+  
+  <meta itemprop="name" content="剖分正方形为奇数个等面积的三角形">
+<meta itemprop="description" content="知乎链接: 剖分正方形为奇数个等面积的三角形.
+问题的背景 如果要把一个正方形剖分成面积相等的 $n$ 个三角形. 当 $n$ 是偶数时, 这是容易实现的. 比如说, 先把正方形平分为 $\dfrac{n}{2}$​ 个矩形, 再在分出来每个矩形里面画一条对角线 (如下图). 而 $n$ 是奇数时, 是否有可能将一个正方形平分为 $n$ 个面积相等的三角形?
+这个问题在 1965 年被 Fred Richman 提出: 能否将一个正方形剖分成奇数个面积相等的三角形? 1968 年, John Thomas 证明了顶点为 $(0,0), (0,1), (1,0), (1,1)$ 的正方形不能剖分成奇数个面积相等的所有顶点都具有奇数分母的有理坐标的三角形. 直到 1970 年, Paul Monsky 才最终解决了这个问题: 将一个正方形剖分为奇数个等面积的三角形是不可能的!
+这个看似是欧氏几何中的经典题目, 答案早已为人所知的 &ldquo;简单问题&rdquo; 在五十多年前才得到证明, 在证明里还用到了域的赋值理论等较为高等的工具!
+证明准备 序关系 Definition (偏序) 称集合 $S$ 上的关系 $\leqslant$ 为偏序 (partial order) 关系, 如果它满足:
+(1) 自反性: 对任意 $a \in S$, $a \leqslant a$;"><meta itemprop="datePublished" content="2023-07-19T12:42:44+08:00" />
+<meta itemprop="dateModified" content="2023-07-19T12:42:44+08:00" />
+<meta itemprop="wordCount" content="1368">
+<meta itemprop="keywords" content="" />
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="剖分正方形为奇数个等面积的三角形"/>
+<meta name="twitter:description" content="知乎链接: 剖分正方形为奇数个等面积的三角形.
+问题的背景 如果要把一个正方形剖分成面积相等的 $n$ 个三角形. 当 $n$ 是偶数时, 这是容易实现的. 比如说, 先把正方形平分为 $\dfrac{n}{2}$​ 个矩形, 再在分出来每个矩形里面画一条对角线 (如下图). 而 $n$ 是奇数时, 是否有可能将一个正方形平分为 $n$ 个面积相等的三角形?
+这个问题在 1965 年被 Fred Richman 提出: 能否将一个正方形剖分成奇数个面积相等的三角形? 1968 年, John Thomas 证明了顶点为 $(0,0), (0,1), (1,0), (1,1)$ 的正方形不能剖分成奇数个面积相等的所有顶点都具有奇数分母的有理坐标的三角形. 直到 1970 年, Paul Monsky 才最终解决了这个问题: 将一个正方形剖分为奇数个等面积的三角形是不可能的!
+这个看似是欧氏几何中的经典题目, 答案早已为人所知的 &ldquo;简单问题&rdquo; 在五十多年前才得到证明, 在证明里还用到了域的赋值理论等较为高等的工具!
+证明准备 序关系 Definition (偏序) 称集合 $S$ 上的关系 $\leqslant$ 为偏序 (partial order) 关系, 如果它满足:
+(1) 自反性: 对任意 $a \in S$, $a \leqslant a$;"/>
+
+  
+  
+
+  <script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\\\[','\\\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold"
+      href=""
+      >Charles IV</a
+    >
+    <a
+      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+    ></a>
+  </div>
+
+  <a
+    class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+  ></a>
+
+  
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = `"#faf6f1"`.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about/"
+        >关于</a
+      >
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/contact/"
+        >联系</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:mt-0 lg:ml-12 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href=" https://github.com/Charle4 "
+        target="_blank"
+      ></a>
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./rss.svg)"
+        href=" index.xml "
+        target="_blank"
+      ></a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-20 pb-32 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-20">
+    <h1 class="!my-0 pb-2.5">剖分正方形为奇数个等面积的三角形</h1>
+
+    
+    <div class="text-sm opacity-60">
+      
+      <time>2023年7月19日</time>
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>知乎链接: <a href="https://zhuanlan.zhihu.com/p/644365506">剖分正方形为奇数个等面积的三角形</a>.</p>
+<h2 id="问题的背景">问题的背景</h2>
+<p>如果要把一个正方形剖分成面积相等的 $n$ 个三角形. 当 $n$ 是偶数时, 这是容易实现的. 比如说, 先把正方形平分为 $\dfrac{n}{2}$​ 个矩形, 再在分出来每个矩形里面画一条对角线 (如下图). 而 $n$ 是奇数时, 是否有可能将一个正方形平分为 $n$ 个面积相等的三角形?</p>
+<p><img src="https://github.com/Charle4/Image-Hosting-Service/raw/main/20230718/%E5%81%B6%E6%95%B0.5touvy2cgdw0.png" alt=""></p>
+<p>这个问题在 1965 年被 Fred Richman 提出: 能否将一个正方形剖分成奇数个面积相等的三角形? 1968 年, John Thomas 证明了顶点为 $(0,0), (0,1), (1,0), (1,1)$ 的正方形不能剖分成奇数个面积相等的所有顶点都具有奇数分母的有理坐标的三角形. 直到 1970 年, Paul Monsky 才最终解决了这个问题: 将一个正方形剖分为奇数个等面积的三角形是不可能的!</p>
+<p>这个看似是欧氏几何中的经典题目, 答案早已为人所知的 &ldquo;简单问题&rdquo; 在五十多年前才得到证明, 在证明里还用到了域的赋值理论等较为高等的工具!</p>
+<h2 id="证明准备">证明准备</h2>
+<h3 id="序关系">序关系</h3>
+<p><em><strong>Definition</strong></em> <strong>(偏序)</strong> 称集合 $S$ 上的关系 $\leqslant$ 为<strong>偏序</strong> (partial order) 关系, 如果它满足:</p>
+<p>(1) 自反性: 对任意 $a \in S$, $a \leqslant a$;</p>
+<p>(2) 反对称性: 对任意 $a, b \in S$, 如果 $a\leqslant b$ 且 $b \leqslant a$, 则 $a=b$;</p>
+<p>(3) 传递性: 对任意 $a, b, c \in S$, 如果 $a \leqslant b$, 且$b \leqslant c$, 则 $a \leqslant c$.</p>
+<p>一个附加了序关系 $\leqslant$ 的集合 $X$ 称为<strong>偏序集</strong> (poset), 记为 $(X,\leqslant)$.</p>
+<p>对一个偏序集 $(X,\leqslant)$, 如果 $a \leqslant b$ 但 $a \neq b$, 则记为 $a&lt;b$.</p>
+<p>任意两个元素具有可比性的偏序称为<strong>全序</strong> (total order) 或线性序 (linear order). 对于每一 (非严格) 全序关系 $\leqslant$ 都有一对应的<strong>严格全序关系</strong> $&lt;$, $a&lt;b$ 当且仅当 $a \leqslant b$ 且 $a \neq b$.</p>
+<p>记 $a \geqslant b$ 表示 $b \leqslant a$, $a&gt;b$ 表示 $b&lt;a$.</p>
+<p><em><strong>Lemma</strong></em> <strong>(Zorn 引理)</strong> 设 $(P,\leqslant)$ 是非空偏序集. 如果 $P$ 中的任何非空全序子集 (升链) $L \subseteq P$ 都有上界, 即存在 $u \in P$, 任意 $x\in L$, 有 $x \leqslant u$, 那么 $P$ 中存在一个极大元素 (即 $P$ 中不存在比它大的元素).</p>
+<h3 id="域的赋值">域的赋值</h3>
+<p><em><strong>Definition</strong></em> <strong>(赋序阿贝尔群)</strong> 称一个阿贝尔群 $G$ 为<strong>赋序阿贝尔群</strong>, 如果其元素按 (严格) 全序 $&lt;$ 排列, 且对任意 $a, b, c$, 若 $a&lt;b$, 则有 $ac&lt;bc$.</p>
+<p>后文都记群 $G$ 的单位元为 $1$.</p>
+<p>例如 $(\mathbb{R}^+, \cdot )$ 在通常序下是一个赋序阿贝尔群.</p>
+<p><em><strong>Property</strong></em> $G$ 是一个赋序阿贝尔群, 则任意 $x,y \in G$, $x&lt;y \Leftrightarrow x^{-1}&gt;y^{-1}$.</p>
+<p>我们在赋序阿贝尔群 $G$ 中加入一个特殊的元素 $0$, 并约定任意 $g \in G$, 有 $0&lt;g$.</p>
+<p><em><strong>Definition</strong></em> <strong>(非阿基米德赋值函数)</strong> $F$ 是一个域, $G$ 是一个赋序阿贝尔群, 称 $v: F \rightarrow \{0\} \cup G$ 为一个<strong>非阿基米德赋值函数</strong> (non-archimedian norm), 如果对任意 $x,y \in F$, 有</p>
+<p>(1) $v(x)=0 \Leftrightarrow x=0$;</p>
+<p>(2) $v(xy)=v(x)v(y)$;</p>
+<p>(3) $v(x+y) \leqslant \max \{ v(x), v(y) \}$.</p>
+<p>例如, $F=\mathbb{Q}$, $G=\mathbb{R}^+$, $p$ 是一个素数. $v_p: \mathbb{Q} \rightarrow \{0\} \cup \mathbb{R}^+$,
+$$
+v_p (0)=0, \quad v_p \left(p^k \dfrac{a}{b} \right) =p^{-k},\
+$$
+$k \in \mathbb{Z}$, $a,b \in \mathbb{Z}$, $a,b \neq 0$, $p\nmid a$, $p\nmid b$. $v_p$ 被称为 $\mathbb{Q}$ 的 <strong>$p$-进赋值</strong>.</p>
+<p><em><strong>Property</strong></em> $v$ 是一个非阿基米德赋值函数, 则</p>
+<p>(1) $v(1)=v(-1)=1$;</p>
+<p>(2) $v(-x)=v(x)$, $\forall x$;</p>
+<p>(3) $v(x^{-1})=v(x)^{-1}$, $x \neq 0$;</p>
+<p>(4) $v(x+y)=\max \{v(x),v(y)\}$, 如果 $v(x)\neq v(y)$.</p>
+<p><em><strong>Proof.</strong></em> (1) $v(1)=v(1 \cdot 1)=v(1) \cdot v(1) \Rightarrow v(1)=1$.
+$v(-1)^2=v((-1) \cdot (-1))=v(1)=1$, 若 $v(-1)&lt;1$, $\Rightarrow$ $1=v(-1)^2&lt;v(-1)$, 矛盾; 若 $v(-1)&gt;1$, $\Rightarrow$ $1=v(-1)^2&gt;v(-1)$, 矛盾. 所以 $v(-1)=1$.</p>
+<p>(2) $v(-x)=v((-1) \cdot x)=v(-1)\cdot v(x)=v(x)$.</p>
+<p>(3) $1=v(1)=v(x\cdot x^{-1})=v(x)\cdot v(x^{-1}) \Rightarrow v(x^{-1})=v(x)^{-1}$.</p>
+<p>(4) 不失一般性, 设 $v(x)&lt;v(y)$, 则
+$$
+\begin{aligned}v(y)=v((x+y)+(-x)) &amp; \leqslant \max \{v(x+y), v(x)\} \&amp;=v(x+y)\&amp;\leqslant \max \{v(x), v(y)\}=v(y), \end{aligned}\
+$$
+(中间的等号是因为如果 $\max \{v(x+y), v(x)\}=v(x)$, 则可推出 $v(y)\leqslant v(x)$, 矛盾.) 则 $v(x+y)= v(y)=\max \{v(x),v(y)\}$. ◻</p>
+<p><em><strong>Remark</strong></em> 由上述结论易知, 如果 $v(a)&gt;v(b_i)$, $\forall i=1,2, \cdots, k$, 则
+$$
+v\left(a \pm b_{1} \pm b_{2} \pm \cdots \pm b_{k}\right)=v(a).\
+$$</p>
+<p><em><strong>Lemma</strong></em> 如果 $\mathbb{R}$ 上的非阿基米德赋值函数 $v$ 满足 $v \left( \displaystyle{\dfrac{1}{2}} \right)&gt;1$, 则任意奇数 $n$, 有 $v \left( \displaystyle{\dfrac{1}{n}} \right)=1$.</p>
+<p><em><strong>Proof.</strong></em> $v(2)=v\left(\displaystyle{\dfrac{1}{2}}\right)^{-1}&lt;1$, 由非阿基米德赋值函数的定义 (3) 与归纳法可知 $v(2k)&lt;1$.</p>
+<p>由性质 (4), $v(2k+1)=v(1)=1$, $\Rightarrow v\left(\displaystyle{\dfrac{1}{2k+1}}\right)=1$. ◻</p>
+<p>给定一个域 $F$ 上的非阿基米德赋值函数 $v$, 记
+$$
+R=\left\{x \in F \vert  v(x) \leqslant 1 \right\}, \quad U=\left\{x \in F \vert  v(x) = 1 \right\}.\
+$$
+则 $R$ 是 $F$ 的子环 (这里所说的环都是含有单位元 $1$ 的环.), 称为 $v$ 的<strong>赋值环</strong>.</p>
+<p>注意到 $v\left( xx^{-1}\right) =v(1) = 1$, 故 $v(x) = 1$ 当且仅当 $v\left(x^{-1}\right) = 1$. 因此 $U$ 是 $R$ 的单位 (可逆元) 的集合. 特别地, $U$ 是 $F$ 的乘法群 $F^{\times}=F , \backslash , \{0\}$ 的子群.</p>
+<p>记 $R^{-1}=\left\{x^{-1} \vert x\neq 0, x \in R \right\}$.</p>
+<p><em><strong>Lemma</strong></em> 域 $F$ 的一个真子环 $R$ 是 $F$ 上的某个非阿基米德赋值函数的赋值环当且仅当 $F=R\cup R^{-1}$.</p>
+<p><em><strong>Proof.</strong></em> 先证必要性, 设 $R$ 是某个非阿基米德赋值函数的赋值环, 显然有 $R\cup R^{-1}\subseteq F$, 故只需证 $F\subseteq R\cup R^{-1}$. 任意 $x \in F$, 若 $x\in R$, 则 $x\in R\cup R^{-1}$. 若 $x \notin  R$, 则 $v(x)&gt;1$, $\Rightarrow v\left(x^{-1}\right)&lt;1$. 因此 $x^{-1}\in R$, $\Rightarrow x=\left(x^{-1} \right) ^{-1} \in R^{-1}$. 故 $x\in R\cup R^{-1}$. 所以 $F\subseteq R\cup R^{-1}$, 所以 $F= R\cup R^{-1}$.</p>
+<p>现证充分性, 设 $R$ 是 $F$ 的一个真子环, 满足 $F= R\cup R^{-1}$. 设 $U$ 是 $R$ 的单位的集合, 即 $U=\left\{x \in R \vert x^{-1} \in R \right\}$. 易知 $U$ 是 $F^{\times}$ 的子群. 考虑商群 $G=F^{\times} / U$. 定义 $G$ 上的序关系 $&lt;$:
+$$
+xU &lt; yU \Leftrightarrow x y^{-1} \in R , \backslash , U.\
+$$</p>
+<p>下证 $&lt;$ 关系是定义良好的. 设 $xU=aU$, $yU=bU$, $xU&lt;yU$, 即 $ax^{-1} \in U$, $yb^{-1}\in U$, $xy^{-1} \in R , \backslash , U$. 因此 $ab^{-1}=(ax^{-1})(xy^{-1})(yb^{-1}) \in R , \backslash , U$. 则 $aU&lt;bU$. 所以 $&lt;$ 关系是定义良好的.</p>
+<p>容易验证, $&lt;$ 是全序, 且 $xU&lt;yU \Rightarrow xzU&lt;yzU, \forall x,y,z$. 定义映射 $v: F \rightarrow \{0\} \cup G , (0&lt;g, \forall g \in G)$,
+$$
+v(0)=0, \quad v(x)=xU , (x \neq 0).\
+$$
+容易验证 $v$ 是 $F$ 上的非阿基米德赋值函数, 且 $R$ 是 $v$ 的赋值环. ◻</p>
+<p><em><strong>Lemma</strong></em> 存在 $\mathbb{R}$ 上的非阿基米德赋值函数 $v$ 使得 $v\left(\displaystyle{\dfrac{1}{2}}\right)&gt;1$.</p>
+<p><em><strong>Proof.</strong></em> 首先证明 $\mathbb{R}$ 存在不含 ${\dfrac{1}{2}}$ 的在包含意义下的极大子环. 令 $P$ 为 $\mathbb{R}$ 的不含 ${\dfrac{1}{2}}$ 的子环在包含关系下组成的偏序集. 显然 $\mathbb{Z} \in P$, 所以 $P$ 非空. 事实上, $P$ 中所有的升链都有上界, 取所有不含 ${\dfrac{1}{2}}$ 的子环的并即可. 由 Zorn 引理, $P$ 有极大元 $S$, $S$ 是 $\mathbb{R}$ 的真子环且 ${\dfrac{1}{2}} \notin S$.</p>
+<p>现在证明 $S$ 是赋值环, 只需证明 $\mathbb{R}=S\cup S^{-1}$. 用反证法, 若 $\mathbb{R}\neq S\cup S^{-1}$, 则存在 $a \in \mathbb{R} , \backslash , \left(B \cup B^{-1}\right)$. 记由 $S\cup \{a\}$ 生成的子环为 $B[a]$, 即是那些可以写成系数在 $S$ 中的关于 $a$ 的多项式的实数的集合. 类似地定义 $S\left[a^{-1}\right]$. 记 $2S=\{2x \vert x \in S \}$. 显然 $2S \subseteq S$, 从而 $2 S[a] \subseteq S[a]$, $2 S\left[a^{-1}\right] \subseteq S\left[a^{-1}\right]$. 如果 $2S[a]\neq S[a]$ 或 $2S\left[a^{-1}\right]\neq S\left[a^{-1}\right]$, 则由 $1\in S$ 有 $\dfrac{1}{2}\notin S[a]$, 因为如果 $\dfrac{1}{2}\in S[a]$, 则存在 $S$ 上的多项式 $f(x)$ 使得 $f(a)=\dfrac{1}{2}$, 则 $\forall g \in S[x]$, $g(a)=(2 f(a))\cdot g(a)=2(f\circ  g)(x) \in 2 S[a]$, 所以 $S[a] \subseteq 2 S[a]$, 又因 $2S[a] \subseteq S[a]$, 所以 $2S[a]= S[a]$, 矛盾. 类似可以证明 $\dfrac{1}{2}\notin S\left[a^{-1}\right]$. $\dfrac{1}{2} \notin S[a]$ 和 $\dfrac{1}{2} \notin S\left[a^{-1}\right]$, 都与 $S \subset \mathbb{R}$ 是不含 $\dfrac{1}{2}$ 的极大子环矛盾.</p>
+<p>因此 $2S[a]= S[a]$, $2S\left[a^{-1}\right]= S\left[a^{-1}\right]$. 所以 $1\in S$ 可以表示为
+$$
+1=2 c_{0}+2 c_{1} a+\cdots+2 c_{m} a^{m}, \quad  c_{i} \in S, \quad (1)\
+$$
+$$
+1=2 d_{0}+2 d_{1} a^{-1}+\cdots+2 d_{n} a^{-n}, \quad d_{i} \in S, \quad (2)\
+$$
+$m\geqslant 1$, $n\geqslant 1$.</p>
+<p>设以上表示中的 $m$ 和 $n$ 是极小的. 不失一般性, 设 $m\geqslant n$, 因为否则可以互换 $a$ 和 $a^{一1}$. 在 $(1)$ 式的两边同乘 $1- 2d_0$, 再同加 $2d_0$, 得
+$$
+1=2\left(c_{0}\left(1-2 d_{0}\right)+d_{0}\right)+2 c_{1}\left(1-2 d_{0}\right) a+\cdots+2 c_{m}\left(1-2 d_{0}\right) a^{m} . \quad (3)\
+$$
+在 $(2)$ 式的两边同减 $2d_0$, 再同乘 $a^m$, 得
+$$
+\left(1-2 d_{0}\right) a^{m}=2 d_{1} a^{m-1}+\cdots+2 d_{n} a^{m-n}. \quad (4)\
+$$
+此时, 可将式 $(3)$ 的项 $(1- 2d_0)a^m$ 用式 $(4)$ 替换, 这样 $1 \in S$ 就被表达成了 $2S[a]$ 里的一个次数不超过 $m-1$ 的多项式, 这与 $m$ 的极小性矛盾. ◻</p>
+<h3 id="sperner-引理">Sperner 引理</h3>
+<p>设 $v$ 是 $\mathbb{R}$ 上的非阿基米德赋值函数, 满足 $v\left(\displaystyle{\dfrac{1}{2}}\right)&gt;1$, 我们已经证明了它的存在性. 以下我们构造一个 $\mathbb{R}^2$ 平面的着色.</p>
+<p>$\mathbb{R}^2$ 上的点 $(x,y)$ 的着色将根据三元组 $(x,y,1)$ 在赋值 $v$ 下的最大值第一次出现在哪里而定. 这个最大值也许出现一次, 二次, 甚至三次. 颜色 (蓝, 绿和红) 记录了最大的 $v$ 值第一次出现的那个坐标.
+$$
+(x, y) \text { 颜色为 }\begin{cases}\text { 蓝,  } v(x) \geqslant v(y) \geqslant v(1); \ \text { 绿,  } v(y)&gt;v(x), v(y) \geqslant v(1); \ \text { 红,  } v(x)&lt;v(1), v(y)&lt;v(1) . \end{cases}\
+$$
+这样平面上的每一点唯一对应一种颜色. 称顶点有全部三种颜色的三角形为 &ldquo;<strong>彩虹三角形</strong>&rdquo;.</p>
+<p><em><strong>Lemma</strong></em> 设 $A$ 为一个 &ldquo;彩虹三角形&rdquo; 的面积, 则 $v(A)&gt;1$.</p>
+<p><em><strong>Proof.</strong></em> 设这个三角形的三个顶点为 $P_{b}=\left(x_{b}, y_{b}\right)$, $P_{g}=\left(x_{g}, y_{g}\right)$, $P_{r}=\left(x_{r}, y_{r}\right)$, 分别为蓝色, 绿色, 红色. 记
+$$
+d=\left(\begin{matrix} x_{b} &amp; y_{b} &amp; 1 \ x_{g} &amp; y_{g} &amp; 1 \ x_{r} &amp; y_{r} &amp; 1 \end{matrix}\right),\
+$$
+则 $A=\displaystyle{\dfrac{\lvert d \rvert}{2}}$.</p>
+<p>行列式 $\lvert d \rvert$ 是 $6$ 项之和, 其中之一是各对角元的乘积 $x_b y_g 1$. 根据颜色的定义, 各对角元都在本行达到最大 $v$ 值, 再与每行最后一个元素 $1$ 比较, 有
+$$
+v\left(x_{b} y_{g} 1\right)=v\left(x_{b}\right) v\left(y_{g}\right) v(1) \geqslant v(1) v(1) v(1)=1.\
+$$
+其余 $5$ 项也分别是 $3$ 个矩阵元素的乘积, 每行取 $1$ 个 (正负号不影响 $v$ 值), 会取到至少 $l$ 个主对角线下方的元素, 其 $v$ 值严格小于本行的主对角线元; 还会取到至少 $1$ 个主对角线上方的元素, 其 $v$ 值不大于本行的主对角线元. 因此行列式的这 $5$ 个作和项都有严格小于对角元作和项的 $v$ 值 $v\left(x_{b} y_{g} 1\right)$. 所以由前面的注记, $v(d)=v\left(x_{b} y_{g} 1\right)&gt;1$.</p>
+<p>因此
+$$
+v(A)=v\left(\displaystyle{\dfrac{\lvert d \rvert}{2}}\right)=v\left(\dfrac{1}{2}\right) v(d)&gt;1\cdot 1=1,\
+$$
+这里用到了 $v\left(\displaystyle{\dfrac{1}{2}}\right)&gt;1$. ◻</p>
+<p><em><strong>Corollary</strong></em> 平面上每条直线至多有 $2$ 种不同颜色的点, 即 &ldquo;彩虹三角形&rdquo; 的面积不可能是 $0$. 进一步, 当 $n$ 为奇数时 &ldquo;彩虹三角形&rdquo; 的面积不可能是 $\displaystyle{\dfrac{1}{n}}$.</p>
+<p><em><strong>Proof.</strong></em> 如果一条直线有三种不同颜色的点, 即是一个退化的 &ldquo;彩虹三角形&rdquo;, 则它的面积为 $0$, 又因 $v(0)=0$, 与上一个引理矛盾.</p>
+<p>因为 $n$ 为奇数时, $v\left(\displaystyle{\dfrac{1}{n}}\right)=1$, 又由于 &ldquo;彩虹三角形&rdquo; 的面积的 $v$ 值严格大于 $1$, 所以对任意奇数 $n$, &ldquo;彩虹三角形&rdquo; 的面积不可能是 $\displaystyle{\dfrac{1}{n}}$. ◻</p>
+<p><em><strong>Lemma</strong></em> <strong>(Sperner)</strong> 任意将单位正方形 $[0,1]^2$ 变成有限多个三角形的分割一定包含奇数个 &ldquo;彩虹三角形&rdquo;, 从而至少有 $1$ 个.</p>
+<p><em><strong>Proof.</strong></em> 给定分割, 考虑正方形相邻顶点之间的线段, 称一端点为红色, 另一端点为蓝色的线段为 &ldquo;红-蓝线段&rdquo;. 接下来将反复运用上一个推论中的事实: 每条直线上至多有 $2$ 种不同颜色的点.</p>
+<p><img src="https://cdn.staticaly.com/gh/Charle4/Image-Hosting-Service@main/20230718/%E6%AD%A3%E6%96%B9%E5%BD%A2%E5%88%86%E5%89%B2%E7%9D%80%E8%89%B2.3ldydg2puqm0.webp" alt=""></p>
+<p>记正方形的顶点分别为 $A(0,0)$, $B(0,1)$, $C(1,1)$, $D(1,0)$. 则 $A$ 为红色, $B$ 为绿色, $C$ 为蓝色, $D$ 为蓝色. 从而 $AB$ 边上没用蓝色的点, $BC$ 边上没有红色的点. 由定义, 直线 $x=1$ 上没有红色的点, 因此 $CD$ 边上没有红色的点. $AD$ 边有奇数条 &ldquo;红-蓝线段&rdquo;, 这是因为 $A$ 点是红色的, $D$ 点是蓝色的, 而且边 $AD$ 上的点只能是红色或蓝色的, 所以当从红色的一端走向蓝色的一端时经过的点一定在红蓝之间发生了奇数次变化. 所以, 正方形的边上一定有奇数条 &ldquo;红-蓝线段&rdquo;.</p>
+<p>如果一个三角形的顶点至多有两种颜色, 那么它的边界上有偶数条 &ldquo;红-蓝线段&rdquo;. 另一方面, &ldquo;彩虹三角形&rdquo; 的边界上有奇数条&quot;红-蓝线段&quot;. 事实上, 三角形的红, 蓝顶点之间有奇数条 &ldquo;红-蓝线段&rdquo;, 任何一对其它颜色组合的顶点之间有偶数条 &ldquo;红-蓝线段&rdquo; (如果有的话). 因此彩虹三角形的边界上有奇数条 &ldquo;红-蓝线段&rdquo;, 而别的三角形有偶数 ($2$ 或 $0$) 对红, 蓝顶点组合.</p>
+<p>下面来计数所有三角形边界上 &ldquo;红-蓝线段&rdquo; 的条数 $t$, 由于正方形内部的每条 &ldquo;红-蓝线段&rdquo; 都被计算了两次, 同时在正方形的边界上有奇数条 &ldquo;红-蓝线段&rdquo;, 所以 $t$ 是奇数. 另一方面, 每个 &ldquo;彩虹三角形&rdquo; 的边界上有奇数条 &ldquo;红-蓝线段&rdquo;, 每个非 &ldquo;彩虹三角形&rdquo; 的边界上有偶数条 &ldquo;红-蓝线段&rdquo;, 所以 &ldquo;彩虹三角形&rdquo; 个数的奇偶性与 $t$ 相同, 即一定存在奇数个 &ldquo;彩虹三角形&rdquo;, 从而至少有 $1$ 个. ◻</p>
+<h2 id="主要定理">主要定理</h2>
+<p><em><strong>Theorem</strong></em> <strong>(Richman-Monsky)</strong> 将一个正方形剖分为奇数个等面积的三角形是不可能的.</p>
+<p><em><strong>Proof.</strong></em> 如果单位正方形被剖分成 $n$ 个等面积的三角形, 则每个三角形的面积为 $\displaystyle{\dfrac{1}{n}}$. 由 Sperner 引理, 存在一个面积为 $\displaystyle{\dfrac{1}{n}}$ 的 &ldquo;彩虹三角形&rdquo;.</p>
+<p>但 $n$ 为奇数时, &ldquo;彩虹三角形&rdquo; 的面积不可能为 $\displaystyle{\dfrac{1}{n}}$. 所以一个正方形不可能剖分为奇数个等面积的三角形. ◻</p>
+<p>1990 年, Paul Monsky 证明了 Sherman Stein (1989) 猜想的更强的结论: $\mathbb{R}^2$ 平面中的中心对称的图形不能分解为奇数个面积相等的三角形.</p>
+</section>
+
+  
+  
+
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 no-underline hover:bg-black/[2%]"
+      href="/post/lsjh1/"
+      ><span>Hilbert 第三问题</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+
+  
+  
+
+  
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2023
+    <a class="link" href="">Charles IV</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >▷ Paper 6</a
+  >
+</footer>
+
+  </body>
+</html>

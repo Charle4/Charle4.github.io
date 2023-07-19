@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready text-sm lg:text-base"
+  style="--bg: #faf6f1"
+  lang="zh"
+>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>Hilbert 第三问题 - Charles IV</title>
+
+  
+  <meta name="theme-color" />
+  
+  <meta name="description" content="知乎链接: Hilbert 第三问题 (1): Wallace-Bolyai-Gerwien 定理——两平面多边形面积相等则可经有限次剪拼组成另一个, Hilbert 第三问题 (2): Dehn 不变量、Dehn-Hadwiger 定理、问题的解答.
+1. 问题的背景、Wallace-Bolyai-Gerwien 定理 Hilbert 第三问题是关于多面体 (多边形) 等可分的一个问题. 首先给出等可分的定义.
+Definition 称 $\mathbb{R}^n$ 中的两个多面体是等可分的 (scissors-congruent), 如果它们可以被分割成有限个多面体 $P_1, P_2, \cdots , P_n$ 与 $Q_1, Q_2, \cdots , Q_n$, 使得 $P_i$ 与 $Q_i$ 全等, $\forall i=1,2,\cdots,n$.
+易知等可分的多面体体积相等, 关于其逆命题, 在 $\mathbb{R}^2$ 中有如下定理, 即面积相等的多边形都是等可分的.
+Theorem (Wallace-Bolyai-Gerwien) $\mathbb{R}^2$ 中的两个多边形是等可分的当且仅当它们面积相等.
+匈牙利数学家 Farkas Bolyai 在 1832 年, 德国军官兼数学业余爱好者 Paul Gerwien 在 1833 年分别证明了这一定理, 但事实上 William Wallace 在 1807 年已经证明了同样的结果." />
+  <meta
+    name="author"
+    content=""
+  />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="/main.min.css" />
+
+  
+  <script
+    defer
+    src="highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+   
+  <link rel="preload" as="image" href="theme.png" />
+
+  
+  
+  
+  <link rel="preload" as="image" href="https://cdn.staticaly.com/gh/Charle4/Image-Hosting-Service@main/20230207/image.49gxhl9trh60.jpg" />
+  
+  
+
+  
+  <link rel="preload" as="image" href="github.svg" />
+  
+  <link rel="preload" as="image" href="rss.svg" />
+  
+
+  
+  <link rel="icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.110.0">
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="Hilbert 第三问题" />
+<meta property="og:description" content="知乎链接: Hilbert 第三问题 (1): Wallace-Bolyai-Gerwien 定理——两平面多边形面积相等则可经有限次剪拼组成另一个, Hilbert 第三问题 (2): Dehn 不变量、Dehn-Hadwiger 定理、问题的解答.
+1. 问题的背景、Wallace-Bolyai-Gerwien 定理 Hilbert 第三问题是关于多面体 (多边形) 等可分的一个问题. 首先给出等可分的定义.
+Definition 称 $\mathbb{R}^n$ 中的两个多面体是等可分的 (scissors-congruent), 如果它们可以被分割成有限个多面体 $P_1, P_2, \cdots , P_n$ 与 $Q_1, Q_2, \cdots , Q_n$, 使得 $P_i$ 与 $Q_i$ 全等, $\forall i=1,2,\cdots,n$.
+易知等可分的多面体体积相等, 关于其逆命题, 在 $\mathbb{R}^2$ 中有如下定理, 即面积相等的多边形都是等可分的.
+Theorem (Wallace-Bolyai-Gerwien) $\mathbb{R}^2$ 中的两个多边形是等可分的当且仅当它们面积相等.
+匈牙利数学家 Farkas Bolyai 在 1832 年, 德国军官兼数学业余爱好者 Paul Gerwien 在 1833 年分别证明了这一定理, 但事实上 William Wallace 在 1807 年已经证明了同样的结果." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/lsjh1/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-07-19T12:21:29+08:00" />
+<meta property="article:modified_time" content="2023-07-19T12:21:29+08:00" />
+
+  
+  <meta itemprop="name" content="Hilbert 第三问题">
+<meta itemprop="description" content="知乎链接: Hilbert 第三问题 (1): Wallace-Bolyai-Gerwien 定理——两平面多边形面积相等则可经有限次剪拼组成另一个, Hilbert 第三问题 (2): Dehn 不变量、Dehn-Hadwiger 定理、问题的解答.
+1. 问题的背景、Wallace-Bolyai-Gerwien 定理 Hilbert 第三问题是关于多面体 (多边形) 等可分的一个问题. 首先给出等可分的定义.
+Definition 称 $\mathbb{R}^n$ 中的两个多面体是等可分的 (scissors-congruent), 如果它们可以被分割成有限个多面体 $P_1, P_2, \cdots , P_n$ 与 $Q_1, Q_2, \cdots , Q_n$, 使得 $P_i$ 与 $Q_i$ 全等, $\forall i=1,2,\cdots,n$.
+易知等可分的多面体体积相等, 关于其逆命题, 在 $\mathbb{R}^2$ 中有如下定理, 即面积相等的多边形都是等可分的.
+Theorem (Wallace-Bolyai-Gerwien) $\mathbb{R}^2$ 中的两个多边形是等可分的当且仅当它们面积相等.
+匈牙利数学家 Farkas Bolyai 在 1832 年, 德国军官兼数学业余爱好者 Paul Gerwien 在 1833 年分别证明了这一定理, 但事实上 William Wallace 在 1807 年已经证明了同样的结果."><meta itemprop="datePublished" content="2023-07-19T12:21:29+08:00" />
+<meta itemprop="dateModified" content="2023-07-19T12:21:29+08:00" />
+<meta itemprop="wordCount" content="908">
+<meta itemprop="keywords" content="" />
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hilbert 第三问题"/>
+<meta name="twitter:description" content="知乎链接: Hilbert 第三问题 (1): Wallace-Bolyai-Gerwien 定理——两平面多边形面积相等则可经有限次剪拼组成另一个, Hilbert 第三问题 (2): Dehn 不变量、Dehn-Hadwiger 定理、问题的解答.
+1. 问题的背景、Wallace-Bolyai-Gerwien 定理 Hilbert 第三问题是关于多面体 (多边形) 等可分的一个问题. 首先给出等可分的定义.
+Definition 称 $\mathbb{R}^n$ 中的两个多面体是等可分的 (scissors-congruent), 如果它们可以被分割成有限个多面体 $P_1, P_2, \cdots , P_n$ 与 $Q_1, Q_2, \cdots , Q_n$, 使得 $P_i$ 与 $Q_i$ 全等, $\forall i=1,2,\cdots,n$.
+易知等可分的多面体体积相等, 关于其逆命题, 在 $\mathbb{R}^2$ 中有如下定理, 即面积相等的多边形都是等可分的.
+Theorem (Wallace-Bolyai-Gerwien) $\mathbb{R}^2$ 中的两个多边形是等可分的当且仅当它们面积相等.
+匈牙利数学家 Farkas Bolyai 在 1832 年, 德国军官兼数学业余爱好者 Paul Gerwien 在 1833 年分别证明了这一定理, 但事实上 William Wallace 在 1807 年已经证明了同样的结果."/>
+
+  
+  
+
+  <script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\\\[','\\\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold"
+      href=""
+      >Charles IV</a
+    >
+    <a
+      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+    ></a>
+  </div>
+
+  <a
+    class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+  ></a>
+
+  
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = `"#faf6f1"`.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about/"
+        >关于</a
+      >
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/contact/"
+        >联系</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:mt-0 lg:ml-12 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href=" https://github.com/Charle4 "
+        target="_blank"
+      ></a>
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./rss.svg)"
+        href=" index.xml "
+        target="_blank"
+      ></a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-20 pb-32 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-20">
+    <h1 class="!my-0 pb-2.5">Hilbert 第三问题</h1>
+
+    
+    <div class="text-sm opacity-60">
+      
+      <time>2023年7月19日</time>
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>知乎链接: <a href="https://zhuanlan.zhihu.com/p/601199694">Hilbert 第三问题 (1): Wallace-Bolyai-Gerwien 定理——两平面多边形面积相等则可经有限次剪拼组成另一个</a>, <a href="https://zhuanlan.zhihu.com/p/601219447">Hilbert 第三问题 (2): Dehn 不变量、Dehn-Hadwiger 定理、问题的解答</a>.</p>
+<h2 id="1-问题的背景wallace-bolyai-gerwien-定理">1. 问题的背景、Wallace-Bolyai-Gerwien 定理</h2>
+<p>Hilbert 第三问题是关于多面体 (多边形) 等可分的一个问题. 首先给出等可分的定义.</p>
+<p><em><strong>Definition</strong></em> 称 $\mathbb{R}^n$ 中的两个多面体是<strong>等可分的</strong> (scissors-congruent), 如果它们可以被分割成有限个多面体 $P_1, P_2, \cdots , P_n$ 与 $Q_1, Q_2, \cdots , Q_n$, 使得 $P_i$ 与 $Q_i$ 全等, $\forall i=1,2,\cdots,n$.</p>
+<p>易知等可分的多面体体积相等, 关于其逆命题, 在 $\mathbb{R}^2$ 中有如下定理, 即面积相等的多边形都是等可分的.</p>
+<p><em><strong>Theorem</strong></em> (Wallace-Bolyai-Gerwien) $\mathbb{R}^2$ 中的两个多边形是等可分的当且仅当它们面积相等.</p>
+<p>匈牙利数学家 Farkas Bolyai 在 1832 年, 德国军官兼数学业余爱好者 Paul Gerwien 在 1833 年分别证明了这一定理, 但事实上 William Wallace 在 1807 年已经证明了同样的结果.</p>
+<p>这个定理有一个构造性的证明, 是将多边形分割拼接成面积相等的正方形.</p>
+<p><em><strong>Proof.</strong></em> 必要性是显然的, 充分性的证明大致分为如下几个步骤.</p>
+<p>第一步, 每个多边形都可以被切割成三角形. 有很多种方法可以做到这一点, 例如对于凸多边形, 可以依次切断每个顶点, 对更复杂的多边形, 可以作一条不平行于多边形任何边的线, 并通过多边形的每个顶点绘制一条平行于这条线的线, 这会将多边形分为三角形和梯形, 进而可以将梯形分为三角形. 如图所示.</p>
+<p><img src="https://cdn.staticaly.com/gh/Charle4/Image-Hosting-Service@main/20230127/%E5%87%B8%E5%A4%9A%E8%BE%B9%E5%BD%A2.6fjhiukbe400.webp" alt="凸多边形"></p>
+<p><img src="https://cdn.staticaly.com/gh/Charle4/Image-Hosting-Service@main/20230127/%E5%A4%8D%E6%9D%82%E5%A4%9A%E8%BE%B9%E5%BD%A2.5wtsnohfwbs0.webp" alt="复杂多边形"></p>
+<p>第二步, 每个三角形都可以分割并拼接成平行四边形. 只需如图沿其中线分开再拼接即可. 要证得到的图形是平行四边形, 只需证明 $BD // CD^\prime$. 而这由于 $\angle{BDE} + \angle{ADE} = \pi$ 显然成立.</p>
+<p><img src="https://cdn.staticaly.com/gh/Charle4/Image-Hosting-Service@main/20230127/%E4%B8%89%E8%A7%92%E5%BD%A2.bbgkuyeskag.webp" alt="三角形-&gt;平行四边形"></p>
+<p>第三步, 每个平行四边形都可以分割再拼接成矩形. 过平行四边形的一个顶点做高, 若垂足在边上, 直接把平行四边形沿这条高分开再拼接. 如果平行四边形的底边较 &ldquo;短&rdquo; 以致于垂足不在边上, 需要先沿对角线分开再变成底边较 &ldquo;长&rdquo; 的平行四边形. 如图所示.</p>
+<p><img src="https://cdn.staticaly.com/gh/Charle4/Image-Hosting-Service@main/20230127/%E5%B9%B3%E8%A1%8C%E5%9B%9B%E8%BE%B9%E5%BD%A2to%E7%9F%A9%E5%BD%A2.1hdtn0jc041.webp" alt="平行四边形-&gt;矩形"></p>
+<p><img src="https://cdn.staticaly.com/gh/Charle4/Image-Hosting-Service@main/20230127/%E7%9F%AD%E5%B9%B3%E8%A1%8C%E5%9B%9B%E8%BE%B9%E5%BD%A2.35g3cbv94u8.webp" alt="底边较 &amp;ldquo;短&amp;rdquo; 的平行四边形"></p>
+<p>第四步, 每个矩形都可以分割拼接成正方形. 设矩形的两边为 $a$ 和 $b$, 若 $a=b$ 则矩形就是正方形. 若 $a \neq b$, 如图构造一条长为 $c=\sqrt{a b}$ 的切割线, 平移小三角形得到一个平行四边形, 它的一条边长为 $c$. 用第三步的方法固定 $c$ 边把这个平行四边形切割拼接成矩形, 由于 $c^{2}=a b$ 正好是原平行四边形的面积, 所以切割拼接所得的一边长为 $c$ 的矩形必定是边长为 $c$ 的正方形.</p>
+<p><img src="https://cdn.staticaly.com/gh/Charle4/Image-Hosting-Service@main/20230127/%E7%9F%A9%E5%BD%A2to%E5%B9%B3%E8%A1%8C%E5%9B%9B%E8%BE%B9%E5%BD%A2.16y3jdkh9uik.webp" alt="矩形-&gt;平行四边形"></p>
+<p>第五步, 两个正方形可以分割拼接成一个大正方形, 进而任意有限个正方形都可以分割拼接成一个正方形. 将两个正方形分割拼接成一个大正方形也有很多种方法可以做到, 其中一种方法如图所示, 这也是勾股定理的一种证明方式.</p>
+<p><img src="https://cdn.staticaly.com/gh/Charle4/Image-Hosting-Service@main/20230127/%E6%AD%A3%E6%96%B9%E5%BD%A2+%E6%AD%A3%E6%96%B9%E5%BD%A2.54jhbsdmvw40.jpg" alt="正方形+正方形"></p>
+<p>这样我们就证明了每个多边形都可以分割再拼接成与它面积相等的正方形, 即与和它面积相等的正方形等可分, 进而任意两个面积相等的多边形都等可分. $\quad \square$</p>
+<p>David Hilbert 猜测这一定理不能推广到高维空间, 且 3 维空间中就存在反例. Hilbert 于 1900 年在巴黎的国际数学家大会提出了他著名的 23 个问题, 其中第三个问题就是这一问题. 具体而言, <strong>Hilbert 第三问题</strong>是: 给出两个底面全等, 高相等的四面体, 它们不是等可分的.</p>
+<p>Hilbert 的学生 Max Dehn 在 1902 年在两篇论文中完全解决了这个问题, 他还给出了多面体等可分的一个条件, Dehn 的证明是用代数证明几何中不可能结果的一个著名的例子.</p>
+<h2 id="2-证明准备">2. 证明准备</h2>
+<h3 id="21-线性代数预备知识">2.1. 线性代数预备知识</h3>
+<p>对 $M=\left\{m_1, m_2, \cdots , m_k \right\} \subseteq \mathbb{R}$, 定义
+$$
+V(M) := \left\{\sum_{i=1}^k q_im_i \mid q_i \in \mathbb{Q} \right\}.\
+$$
+则 $V(M)$ 是 $\mathbb{Q}$ 上的有限维向量空间.</p>
+<p><em><strong>Lemma</strong></em> 对 $\mathbb{R}$ 的任何一个包含 $M$ 的有限子集 $M^\prime$, 则 $V(M)$ 是 $V(M^\prime)$ 的子空间. 若 $f:V(M)\rightarrow \mathbb{Q}$ 是一个线性映射, 则 $f$ 可以扩充为一个线性映射 $f^\prime : V(M^\prime)\rightarrow \mathbb{Q}$, 使得 $f^\prime (m) = f(m), \forall m \in M$.</p>
+<h3 id="22-dehn-不变量">2.2. Dehn 不变量</h3>
+<p>对 $\mathbb{R}^3$ 中的一个多面体 $P$, 令 $M_P \subseteq \mathbb{R}$ 为 $P$ 的所有二面角 (的值) 与 $\pi$ 组成的集合.</p>
+<p>给定一个包含 $M_P$ 的有限集 $M \subseteq \mathbb{R}$, 与线性映射 $f: V(M)\rightarrow \mathbb{Q}$ 满足 $f(\pi)=0$. 定义 $P$ 的 <strong>Dehn 不变量</strong>为
+$$
+D_f (P) = \sum_e \ell (e)f(\alpha(e)) \in \mathbb{R},\
+$$
+其中 $e$ 是 $P$ 的每一条边, $\ell (e)$ 是边 $e$ 的长度, $\alpha(e)$ 是与边 $e$ 相邻的两个面所成的二面角.</p>
+<h3 id="23-dehn-hadwiger-定理">2.3. Dehn-Hadwiger 定理</h3>
+<p><em><strong>Theorem</strong></em> (Dehn-Hadwiger) 设 $P$ 和 $Q$ 是两个多面体, $\alpha_{1}, \ldots, \alpha_{s}$ 和 $\beta_{1}, \ldots, \beta_{t}$ 分表表示它们的所有二面角. $M$ 是 $\mathbb{R}$ 的一个有限子集, 满足:
+$$
+\left\{\alpha_{1}, \ldots, \alpha_{s}, \beta_{1}, \ldots, \beta_{t}, \pi\right\} \subseteq M .\
+$$
+如果 $P$ 和 $Q$ 是等可分的, 则对任何线性映射 $f: V(M) \rightarrow \mathbb{Q}$ 满足 $f(\pi)=0$, 有 $D_{f}(P) = D_{f}(Q)$.</p>
+<p>即两个等可分的多面体具有相同的 Dehn 不变量, 这是多面体等可分的一个必要条件.</p>
+<p><em><strong>Proof.</strong></em> 设 $G$ 是一个多面体, $M \subseteq \mathbb{R}$ 是一个包含 $M_G$ 的有限集, $f: V(M)\rightarrow \mathbb{Q}$ 是满足 $f(\pi)=0$ 的任意一个线性映射. 则 $D_f (G) = \sum_e \ell (e)f(\alpha(e))$.</p>
+<p>若 $G$ 分成有限个小多面体 $G_1, G_2, \cdots , G_n$, 设有限集 $M^\prime \supseteq M$ 包含了每个 $G_i$ 的所有二面角, 则 $f: V(M)\rightarrow \mathbb{Q}$ 可扩充为 $f^\prime : V(M^\prime ) \rightarrow \mathbb{Q}$. 下证, $D_f (G) = D_{f^\prime} (G_1) + D_{f^\prime} (G_2) + \cdots + D_{f^\prime} (G_n)$.</p>
+<p>为此, 对多面体的一条边 $e$, 记 $m(e) := \ell (e)f(\alpha(e))$, 则 $D_f (G) = \sum_e m(e)$. 对小多面体 $G_1, G_2, \cdots , G_n$ 的所有边, 可以将它们分为含在 $G$ 的某条边中的 $\{e^\prime\}$ 和其余的 $\{e^{\prime\prime}\}$. 考虑包含在 $G$ 的某条边 $e$ 中的边 $e_{e}^\prime$, 容易看出, $\sum \left(m\left(e_{e}^\prime\right)\right) = m(e)$, 从而 $\sum (m(e^\prime)) = \sum_e \sum \left(m\left(e_{e}^\prime\right)\right) = \sum_e m(e)$. 对其余的边 $e^{\prime\prime}$, 或者在 $G$ 的面的内部, 这时它所在的边上的二面角之和为 $\pi$, $f$ 在这些 $e^{\prime\prime}$ 的值之和为 $f(\pi)= 0$; 或者其所在的 $G_i$ 在 $G$ 的内部, 这时它所在的边上的二面角之和为 $2\pi$, $f$ 在这些 $e^{\prime\prime}$ 的值之和为 $f(2\pi) =2f(\pi)= 0$. 因此 $\sum \left(m\left(e^{\prime\prime}\right)\right) = 0$.</p>
+<p>因此, $D_f (G) = D_{f^{\prime}} (G) = \sum_e m(e) = \sum (m(e^\prime)) + \sum (m(e^{\prime\prime})) = D_{f^\prime} (G_1) + D_{f^\prime} (G_2) + \cdots + D_{f^\prime} (G_n)$.</p>
+<p>所以如果两个多面体 $P,Q$ 是等可分的, 设它们都可以分成有限个多面体 $G_1, G_2, \cdots , G_n$, 则 $D_f (P) = D_{f} (G_1) + D_{f} (G_2) + \cdots + D_{f} (G_n) = D_f (Q)$, 即它们具有相同的 Dehn 不变量 (线性映射 $f: V(M)\rightarrow \mathbb{Q}$, $f(\pi)=0$, 这里不妨设 $M$ 包含了 $P,Q$ 与所有 $G_i$ 的所有二面角, 否则可以用前面的引理扩充). $\quad \square$</p>
+<p><em><strong>Corollary</strong></em> 若多面体 $G$ 可分成有限个小多面体 $G_1, G_2, \cdots , G_n$, 则 $D_f (G) = D_{f} (G_1) + D_{f} (G_2) + \cdots + D_{f} (G_n)$ (线性映射 $f: V(M)\rightarrow \mathbb{Q}$, $f(\pi)=0$, $M$ 包含了 $G$ 与所有 $G_i$ 的所有二面角).</p>
+<h2 id="3-hilbert-第三问题的解答">3. Hilbert 第三问题的解答</h2>
+<p><em><strong>Lemma</strong></em> 设 $n$ 为一个奇数, $n\geqslant 3$, 则
+$A(n)=\frac{1}{\pi} \arccos \frac{1}{\sqrt{n}}$ 是无理数.</p>
+<p><em><strong>Proof.</strong></em> 由和差化积公式, $\cos \alpha+\cos \beta=2 \cos \frac{\alpha+\beta}{2} \cos \frac{\alpha-\beta}{2}$. 令 $\alpha = (k+1)\varphi$, $\beta = (k-1)\varphi$, 则
+$$
+\cos (k+1) \varphi=2 \cos \varphi \cos k \varphi-\cos (k-1) \varphi. \quad (1)\
+$$</p>
+<p>所以对 $\varphi_n=\arccos \frac{1}{\sqrt{n}}$ 有
+$$
+\cos k \varphi_n =\frac{A_k}{\left(\sqrt{n}\right)^k},\
+$$
+其中 $A_k$ 为整数, 且对任意 $k\geqslant 0$, $A_k$ 不被 $n$ 整除, 这可以归纳证明, 证明如下.</p>
+<p>显然, 若 $k=0, 1$, 有 $A_0=A_1=1$, 因为 $n\geqslant 3$, 所以
+$n\nmid A_0, A_1$ 成立.</p>
+<p>对 $k$ 归纳, 设 $n\nmid k$, 由 (1),
+$$
+\cos (k+1) \varphi_{n}=2 \cos \varphi_{n} \cos k \varphi_{n}-\cos (k-1) \varphi_{n}=2 \frac{1}{\sqrt{n}} \frac{A_{k}}{(\sqrt{n})^{k}}-\frac{A_{k-1}}{(\sqrt{n})^{k-1}}=\frac{2 A_{k}-n A_{k-1}}{(\sqrt{n})^{k+1}},\
+$$
+故 $A_{k+1}=2A_k-nA_{k-1}$. 所以对奇数 $n\geqslant 3$, 若 $n\nmid A_k$, 则 $n\nmid A_{k+1}$. 所以 $n\nmid A_k, \forall k\geqslant 0$ 成立.</p>
+<p>假设 $A(n)=\frac{1}{\pi} \varphi_n = \frac{t}{k}=\frac{2t}{2k}$ 为有理数
+($k, t$ 为整数, $\mathrm{gcd}(k,t)=1$). 则
+$$
+\begin{aligned}&amp;2 k \varphi_{n}=2 t \pi \ \Longrightarrow &amp; 1=\cos 2 t \pi=\frac{A_{2 k}}{(\sqrt{n})^{2 k}} \ \Longrightarrow &amp; n^{k}=(\sqrt{n})^{2 k}=A_{2 k}, \end{aligned}\
+$$
+则 $n\left| n^k\right.=A_{2k}$, 矛盾. $\quad \square$</p>
+<p>下面我们可以给出两个不是等可分的底面全等, 高相等的四面体.</p>
+<p>如图所示, 设 $T_1, T_2$ 为两个四面体, 其底面 $ABC$ 全等, 都是直角边长为 $1$ 的等腰直角三角形, $\angle A$ 为直角; $T_1$ 的边 $DA$ 与底面 $ABC$ 垂直, $T_2$ 的边 $DC$ 与底面 $ABC$ 垂直.</p>
+<p><img src="https://cdn.staticaly.com/gh/Charle4/Image-Hosting-Service@main/20230127/T_1.6x3x5p87uqo0.jpg" alt="T1"></p>
+<p><img src="https://cdn.staticaly.com/gh/Charle4/Image-Hosting-Service@main/20230127/T_2.7asxhpomx3c0.jpg" alt="T2"></p>
+<p>$T_1$ 有三条长度为 $1$ 的相互垂直的边 $AB, AC, AD$. 设 $E$ 为 $BC$ 边的中点, 二面角 $D-BC-A = \varphi$, 则 $\cos \varphi =\frac{AE}{DE}=\frac{\frac{\sqrt{2}}{2}}{\frac{\sqrt{6}}{2}}=\frac{1}{\sqrt{3}}$, $\varphi=\arccos \frac{1}{\sqrt{3}}$. 令 $M=\left\{\frac{\pi}{2}, \arccos \frac{1}{\sqrt{3}}, \pi\right\}$, 根据前面的引理, $\frac{1}{\pi} \arccos \frac{1}{\sqrt{3}} \notin \mathbb{Q}$, 故 $\dim V(M)=2$, $V(M)=L\left(\arccos \frac{1}{\sqrt{3}}, \pi\right)$. 定义 $V(M)$ 上的线性映射 $f$, 我们只需定义 $f(\pi)=0$, $f\left(\arccos \frac{1}{\sqrt{3}}\right)=1$. 则
+$$
+D_{f}\left(T_{1}\right)=3 \sqrt{2} \cdot f\left(\arccos \frac{1}{\sqrt{3}}\right)=3 \sqrt{2}.\
+$$</p>
+<p>$T_2$ 有三条相互垂直的, 长度都为 $1$ 的首尾相连的边 $BA, AC, CD$. 易知一个单位正方体 $U$ 可以分成 $6$ 个与 $T_2$ 全等的四面体. 设 $M^\prime \subseteq \mathbb{R}$ 包含 $T_1, T_2$ 的所有二面角. 将上面定义的 $f$ 扩充为 $V(M^\prime)$ 上的线性映射 $f^\prime$, 由 Dehn-Hadwiger 定理的推论,
+$$
+D_{f^{\prime}}\left(T_{2}\right)=\frac{1}{6} D_{f^{\prime}}(U)=0.\
+$$
+而
+$$
+D_{f^{\prime}}\left(T_{1}\right)=D_{f}\left(T_{1}\right)=3 \sqrt{2}.\
+$$</p>
+<p>由 Dehn-Hadwiger 定理, $T_1$ 与 $T_2$ 不是等可分的, 这就是 Hilbert 想要的反例.</p>
+</section>
+
+  
+  
+
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    <a
+      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 no-underline hover:bg-black/[2%]"
+      href="/post/lsjh2/"
+      ><span class="mr-1.5">←</span><span>剖分正方形为奇数个等面积的三角形</span></a
+    >
+    
+    
+  </nav>
+  
+
+  
+  
+
+  
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2023
+    <a class="link" href="">Charles IV</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >▷ Paper 6</a
+  >
+</footer>
+
+  </body>
+</html>
