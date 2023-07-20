@@ -13,11 +13,11 @@
       <pubDate>Thu, 20 Jul 2023 10:58:52 +0800</pubDate>
       
       <guid>/post/proxy/</guid>
-      <description>Anaconda 配置代理 在 C:\Users\username\.condarc 中添加或修改如下内容：
-proxy_servers: http: http://127.0.0.1:port https: http://127.0.0.1:port Git 配置代理 # 设置: git config --global http.proxy http://127.0.0.1:port git config --global https.proxy http://127.0.0.1:port # 取消: git config -–global –unset http.proxy git config -–global –unset https.proxy 有的节点无法代理 SSH 协议, 可以使用 SSH over HTTPS 通过 443 端口使用 SSH:
-运行以下命令测试通过 HTTPS 端口的 SSH 是否可行:
-ssh -T -p 443 git@ssh.github.com 在 C:\Users\username\.ssh\config 中添加如下内容:
-Host github.com Hostname ssh.github.com Port 443 User git </description>
+      <description>Anaconda 配置代理 pip 配置代理 Git 配置代理 Anaconda 配置代理 在 C:\Users\username\.condarc 中添加或修改如下内容：
+proxy_servers: http: http://127.0.0.1:port https: http://127.0.0.1:port pip 配置代理 在 C:\Users\username\pip\pip.ini 中添加或修改如下内容：
+[global] proxy=http://127.0.0.1:port 在终端里运行 pip -v config list 检查配置是否生效.
+Git 配置代理 # 设置: git config --global http.proxy http://127.0.0.1:port git config --global https.proxy http://127.0.0.1:port # 取消: git config -–global –unset http.proxy git config -–global –unset https.proxy 有的节点无法代理 SSH 协议, 可以使用 SSH over HTTPS 通过 443 端口使用 SSH:
+运行以下命令测试通过 HTTPS 端口的 SSH 是否可行:</description>
     </item>
     
     <item>
@@ -26,12 +26,11 @@ Host github.com Hostname ssh.github.com Port 443 User git </description>
       <pubDate>Wed, 19 Jul 2023 12:42:44 +0800</pubDate>
       
       <guid>/post/lsjh2/</guid>
-      <description>知乎链接: 剖分正方形为奇数个等面积的三角形.
+      <description>问题的背景 证明准备 序关系 域的赋值 Sperner 引理 主要定理 知乎链接: 剖分正方形为奇数个等面积的三角形.
 问题的背景 如果要把一个正方形剖分成面积相等的 $n$ 个三角形. 当 $n$ 是偶数时, 这是容易实现的. 比如说, 先把正方形平分为 $\dfrac{n}{2}$​ 个矩形, 再在分出来每个矩形里面画一条对角线 (如下图). 而 $n$ 是奇数时, 是否有可能将一个正方形平分为 $n$ 个面积相等的三角形?
 这个问题在 1965 年被 Fred Richman 提出: 能否将一个正方形剖分成奇数个面积相等的三角形? 1968 年, John Thomas 证明了顶点为 $(0,0), (0,1), (1,0), (1,1)$ 的正方形不能剖分成奇数个面积相等的所有顶点都具有奇数分母的有理坐标的三角形. 直到 1970 年, Paul Monsky 才最终解决了这个问题: 将一个正方形剖分为奇数个等面积的三角形是不可能的!
 这个看似是欧氏几何中的经典题目, 答案早已为人所知的 &amp;ldquo;简单问题&amp;rdquo; 在五十多年前才得到证明, 在证明里还用到了域的赋值理论等较为高等的工具!
-证明准备 序关系 Definition (偏序) 称集合 $S$ 上的关系 $\leqslant$ 为偏序 (partial order) 关系, 如果它满足:
-(1) 自反性: 对任意 $a \in S$, $a \leqslant a$;</description>
+证明准备 序关系 Definition (偏序) 称集合 $S$ 上的关系 $\leqslant$ 为偏序 (partial order) 关系, 如果它满足:</description>
     </item>
     
     <item>
@@ -40,12 +39,11 @@ Host github.com Hostname ssh.github.com Port 443 User git </description>
       <pubDate>Wed, 19 Jul 2023 12:21:29 +0800</pubDate>
       
       <guid>/post/lsjh1/</guid>
-      <description>知乎链接: Hilbert 第三问题 (1): Wallace-Bolyai-Gerwien 定理——两平面多边形面积相等则可经有限次剪拼组成另一个, Hilbert 第三问题 (2): Dehn 不变量、Dehn-Hadwiger 定理、问题的解答.
+      <description>1. 问题的背景、Wallace-Bolyai-Gerwien 定理 2. 证明准备 2.1. 线性代数预备知识 2.2. Dehn 不变量 2.3. Dehn-Hadwiger 定理 3. Hilbert 第三问题的解答 知乎链接: Hilbert 第三问题 (1): Wallace-Bolyai-Gerwien 定理——两平面多边形面积相等则可经有限次剪拼组成另一个, Hilbert 第三问题 (2): Dehn 不变量、Dehn-Hadwiger 定理、问题的解答.
 1. 问题的背景、Wallace-Bolyai-Gerwien 定理 Hilbert 第三问题是关于多面体 (多边形) 等可分的一个问题. 首先给出等可分的定义.
 Definition 称 $\mathbb{R}^n$ 中的两个多面体是等可分的 (scissors-congruent), 如果它们可以被分割成有限个多面体 $P_1, P_2, \cdots , P_n$ 与 $Q_1, Q_2, \cdots , Q_n$, 使得 $P_i$ 与 $Q_i$ 全等, $\forall i=1,2,\cdots,n$.
 易知等可分的多面体体积相等, 关于其逆命题, 在 $\mathbb{R}^2$ 中有如下定理, 即面积相等的多边形都是等可分的.
-Theorem (Wallace-Bolyai-Gerwien) $\mathbb{R}^2$ 中的两个多边形是等可分的当且仅当它们面积相等.
-匈牙利数学家 Farkas Bolyai 在 1832 年, 德国军官兼数学业余爱好者 Paul Gerwien 在 1833 年分别证明了这一定理, 但事实上 William Wallace 在 1807 年已经证明了同样的结果.</description>
+Theorem (Wallace-Bolyai-Gerwien) $\mathbb{R}^2$ 中的两个多边形是等可分的当且仅当它们面积相等.</description>
     </item>
     
   </channel>

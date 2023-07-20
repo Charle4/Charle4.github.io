@@ -35,7 +35,7 @@
 
 <html
   class="not-ready text-sm lg:text-base"
-  style="--bg: #faf6f1"
+  style="--bg: #fff"
   lang="zh"
 >
   <head>
@@ -76,7 +76,7 @@
   
 
   
-   
+     
   <link rel="preload" as="image" href="theme.png" />
 
   
@@ -179,7 +179,7 @@ code.has-jax {
       >Charles IV</a
     >
     <a
-      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
     ></a>
   </div>
 
@@ -203,7 +203,7 @@ code.has-jax {
 
     
     const metaTheme = document.querySelector('meta[name="theme-color"]');
-    const lightBg = `"#faf6f1"`.replace(/"/g, '');
+    const lightBg = `"#fff"`.replace(/"/g, '');
     const setDark = (isDark) => {
       metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
       htmlClass[isDark ? 'add' : 'remove']('dark');
@@ -240,20 +240,20 @@ code.has-jax {
       
       <a
         class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
-        href="/"
-        >主页</a
-      >
-      
-      <a
-        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
         href="/about/"
-        >关于</a
+        >About</a
       >
       
       <a
         class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
         href="/contact/"
-        >联系</a
+        >Contact</a
+      >
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/"
+        >Home</a
       >
       
     </nav>
@@ -296,7 +296,7 @@ code.has-jax {
     
     <div class="text-sm opacity-60">
       
-      <time>2019年5月28日</time>
+      <time>May 28, 2019</time>
       
       
     </div>
