@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready text-sm lg:text-base"
+  style="--bg: #faf6f1"
+  lang="zh"
+>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>Windows 下为某些特殊应用配置系统代理 - Charles IV</title>
+
+  
+  <meta name="theme-color" />
+  
+  <meta name="description" content="Anaconda 配置代理 在 C:\Users\username\.condarc 中添加或修改如下内容：
+proxy_servers: http: http://127.0.0.1:port https: http://127.0.0.1:port Git 配置代理 # 设置: git config --global http.proxy http://127.0.0.1:port git config --global https.proxy http://127.0.0.1:port # 取消: git config -–global –unset http.proxy git config -–global –unset https.proxy 有的节点无法代理 SSH 协议, 可以使用 SSH over HTTPS 通过 443 端口使用 SSH:
+运行以下命令测试通过 HTTPS 端口的 SSH 是否可行:
+ssh -T -p 443 git@ssh.github.com 在 C:\Users\username\.ssh\config 中添加如下内容:
+Host github.com Hostname ssh.github.com Port 443 User git " />
+  <meta
+    name="author"
+    content=""
+  />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="/main.min.css" />
+
+  
+  <script
+    defer
+    src="highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+   
+  <link rel="preload" as="image" href="theme.png" />
+
+  
+  
+  
+  <link rel="preload" as="image" href="https://cdn.staticaly.com/gh/Charle4/Image-Hosting-Service@main/20230207/image.49gxhl9trh60.jpg" />
+  
+  
+
+  
+  <link rel="preload" as="image" href="github.svg" />
+  
+  <link rel="preload" as="image" href="rss.svg" />
+  
+
+  
+  <link rel="icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.110.0">
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="Windows 下为某些特殊应用配置系统代理" />
+<meta property="og:description" content="Anaconda 配置代理 在 C:\Users\username\.condarc 中添加或修改如下内容：
+proxy_servers: http: http://127.0.0.1:port https: http://127.0.0.1:port Git 配置代理 # 设置: git config --global http.proxy http://127.0.0.1:port git config --global https.proxy http://127.0.0.1:port # 取消: git config -–global –unset http.proxy git config -–global –unset https.proxy 有的节点无法代理 SSH 协议, 可以使用 SSH over HTTPS 通过 443 端口使用 SSH:
+运行以下命令测试通过 HTTPS 端口的 SSH 是否可行:
+ssh -T -p 443 git@ssh.github.com 在 C:\Users\username\.ssh\config 中添加如下内容:
+Host github.com Hostname ssh.github.com Port 443 User git " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/proxy/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-07-20T10:58:52+08:00" />
+<meta property="article:modified_time" content="2023-07-20T10:58:52+08:00" />
+
+  
+  <meta itemprop="name" content="Windows 下为某些特殊应用配置系统代理">
+<meta itemprop="description" content="Anaconda 配置代理 在 C:\Users\username\.condarc 中添加或修改如下内容：
+proxy_servers: http: http://127.0.0.1:port https: http://127.0.0.1:port Git 配置代理 # 设置: git config --global http.proxy http://127.0.0.1:port git config --global https.proxy http://127.0.0.1:port # 取消: git config -–global –unset http.proxy git config -–global –unset https.proxy 有的节点无法代理 SSH 协议, 可以使用 SSH over HTTPS 通过 443 端口使用 SSH:
+运行以下命令测试通过 HTTPS 端口的 SSH 是否可行:
+ssh -T -p 443 git@ssh.github.com 在 C:\Users\username\.ssh\config 中添加如下内容:
+Host github.com Hostname ssh.github.com Port 443 User git "><meta itemprop="datePublished" content="2023-07-20T10:58:52+08:00" />
+<meta itemprop="dateModified" content="2023-07-20T10:58:52+08:00" />
+<meta itemprop="wordCount" content="68">
+<meta itemprop="keywords" content="" />
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Windows 下为某些特殊应用配置系统代理"/>
+<meta name="twitter:description" content="Anaconda 配置代理 在 C:\Users\username\.condarc 中添加或修改如下内容：
+proxy_servers: http: http://127.0.0.1:port https: http://127.0.0.1:port Git 配置代理 # 设置: git config --global http.proxy http://127.0.0.1:port git config --global https.proxy http://127.0.0.1:port # 取消: git config -–global –unset http.proxy git config -–global –unset https.proxy 有的节点无法代理 SSH 协议, 可以使用 SSH over HTTPS 通过 443 端口使用 SSH:
+运行以下命令测试通过 HTTPS 端口的 SSH 是否可行:
+ssh -T -p 443 git@ssh.github.com 在 C:\Users\username\.ssh\config 中添加如下内容:
+Host github.com Hostname ssh.github.com Port 443 User git "/>
+
+  
+  
+
+  <script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\\\[','\\\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold"
+      href=""
+      >Charles IV</a
+    >
+    <a
+      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+    ></a>
+  </div>
+
+  <a
+    class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+  ></a>
+
+  
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = `"#faf6f1"`.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/"
+        >主页</a
+      >
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about/"
+        >关于</a
+      >
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/contact/"
+        >联系</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:mt-0 lg:ml-12 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href=" https://github.com/Charle4 "
+        target="_blank"
+      ></a>
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./rss.svg)"
+        href=" index.xml "
+        target="_blank"
+      ></a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-20 pb-32 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-20">
+    <h1 class="!my-0 pb-2.5">Windows 下为某些特殊应用配置系统代理</h1>
+
+    
+    <div class="text-sm opacity-60">
+      
+      <time>2023年7月20日</time>
+      
+      
+    </div>
+    
+  </header>
+
+  <section><h2 id="anaconda-配置代理">Anaconda 配置代理</h2>
+<p>在 <code>C:\Users\username\.condarc</code> 中添加或修改如下内容：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">proxy_servers</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">http</span>: <span style="color:#ae81ff">http://127.0.0.1:port</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">https</span>: <span style="color:#ae81ff">http://127.0.0.1:port</span>
+</span></span></code></pre></div><h2 id="git-配置代理">Git 配置代理</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 设置:</span>
+</span></span><span style="display:flex;"><span>git config --global http.proxy http://127.0.0.1:port
+</span></span><span style="display:flex;"><span>git config --global https.proxy http://127.0.0.1:port
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 取消:</span>
+</span></span><span style="display:flex;"><span>git config -–global –unset http.proxy
+</span></span><span style="display:flex;"><span>git config -–global –unset https.proxy
+</span></span></code></pre></div><p>有的节点无法代理 SSH 协议, 可以使用 <a href="https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port">SSH over HTTPS</a> 通过 443 端口使用 SSH:</p>
+<p>运行以下命令测试通过 HTTPS 端口的 SSH 是否可行:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -T -p <span style="color:#ae81ff">443</span> git@ssh.github.com
+</span></span></code></pre></div><p>在 <code>C:\Users\username\.ssh\config</code> 中添加如下内容:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ae81ff">Host github.com</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">Hostname ssh.github.com</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">Port 443</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">User git</span>
+</span></span></code></pre></div></section>
+
+  
+  
+
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 no-underline hover:bg-black/[2%]"
+      href="/post/lsjh2/"
+      ><span>剖分正方形为奇数个等面积的三角形</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+
+  
+  
+
+  
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2023
+    <a class="link" href="">Charles IV</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >▷ Paper 6</a
+  >
+</footer>
+
+  </body>
+</html>

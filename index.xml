@@ -6,7 +6,20 @@
     <description>Recent content on Charles IV</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 19 Jul 2023 12:42:44 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Jul 2023 10:58:52 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows 下为某些特殊应用配置系统代理</title>
+      <link>/post/proxy/</link>
+      <pubDate>Thu, 20 Jul 2023 10:58:52 +0800</pubDate>
+      
+      <guid>/post/proxy/</guid>
+      <description>Anaconda 配置代理 在 C:\Users\username\.condarc 中添加或修改如下内容：
+proxy_servers: http: http://127.0.0.1:port https: http://127.0.0.1:port Git 配置代理 # 设置: git config --global http.proxy http://127.0.0.1:port git config --global https.proxy http://127.0.0.1:port # 取消: git config -–global –unset http.proxy git config -–global –unset https.proxy 有的节点无法代理 SSH 协议, 可以使用 SSH over HTTPS 通过 443 端口使用 SSH:
+运行以下命令测试通过 HTTPS 端口的 SSH 是否可行:
+ssh -T -p 443 git@ssh.github.com 在 C:\Users\username\.ssh\config 中添加如下内容:
+Host github.com Hostname ssh.github.com Port 443 User git </description>
+    </item>
+    
     <item>
       <title>剖分正方形为奇数个等面积的三角形</title>
       <link>/post/lsjh2/</link>
