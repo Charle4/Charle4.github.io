@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>系列 on Charles IV</title>
-    <link>/%E7%B3%BB%E5%88%97/</link>
+    <link>www.suesung.com/%E7%B3%BB%E5%88%97/</link>
     <description>Recent content in 系列 on Charles IV</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <copyright>Copyright © 2023, Charles IV; all rights reserved.</copyright><atom:link href="/%E7%B3%BB%E5%88%97/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright © 2023, Charles IV; all rights reserved.</copyright><atom:link href="www.suesung.com/%E7%B3%BB%E5%88%97/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
