@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Charles IV</title>
-    <link>www.suesung.com/</link>
+    <link>/</link>
     <description>Recent content on Charles IV</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2023, Charles IV; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 20 Jul 2023 10:58:52 +0800</lastBuildDate><atom:link href="www.suesung.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Jul 2023 10:58:52 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Windows 下为某些特殊应用配置系统代理</title>
-      <link>www.suesung.com/post/proxy/</link>
+      <link>/post/proxy/</link>
       <pubDate>Thu, 20 Jul 2023 10:58:52 +0800</pubDate>
       
-      <guid>www.suesung.com/post/proxy/</guid>
+      <guid>/post/proxy/</guid>
       <description>Anaconda 配置代理 pip 配置代理 Git 配置代理 Anaconda 配置代理 在 C:\Users\username\.condarc 中添加或修改如下内容：
 proxy_servers: http: http://127.0.0.1:port https: http://127.0.0.1:port pip 配置代理 在 C:\Users\username\pip\pip.ini 中添加或修改如下内容：
 [global] proxy=http://127.0.0.1:port 在终端里运行 pip -v config list 检查配置是否生效.
@@ -23,10 +23,10 @@ Git 配置代理 # 设置: git config --global http.proxy http://127.0.0.1:port 
     
     <item>
       <title>剖分正方形为奇数个等面积的三角形</title>
-      <link>www.suesung.com/post/lsjh2/</link>
+      <link>/post/lsjh2/</link>
       <pubDate>Wed, 19 Jul 2023 12:42:44 +0800</pubDate>
       
-      <guid>www.suesung.com/post/lsjh2/</guid>
+      <guid>/post/lsjh2/</guid>
       <description>问题的背景 证明准备 序关系 域的赋值 Sperner 引理 主要定理 知乎链接: 剖分正方形为奇数个等面积的三角形.
 问题的背景 如果要把一个正方形剖分成面积相等的 $n$ 个三角形. 当 $n$ 是偶数时, 这是容易实现的. 比如说, 先把正方形平分为 $\dfrac{n}{2}$​ 个矩形, 再在分出来每个矩形里面画一条对角线 (如下图). 而 $n$ 是奇数时, 是否有可能将一个正方形平分为 $n$ 个面积相等的三角形?
 这个问题在 1965 年被 Fred Richman 提出: 能否将一个正方形剖分成奇数个面积相等的三角形? 1968 年, John Thomas 证明了顶点为 $(0,0), (0,1), (1,0), (1,1)$ 的正方形不能剖分成奇数个面积相等的所有顶点都具有奇数分母的有理坐标的三角形. 直到 1970 年, Paul Monsky 才最终解决了这个问题: 将一个正方形剖分为奇数个等面积的三角形是不可能的!
@@ -36,10 +36,10 @@ Git 配置代理 # 设置: git config --global http.proxy http://127.0.0.1:port 
     
     <item>
       <title>Hilbert 第三问题</title>
-      <link>www.suesung.com/post/lsjh1/</link>
+      <link>/post/lsjh1/</link>
       <pubDate>Wed, 19 Jul 2023 12:21:29 +0800</pubDate>
       
-      <guid>www.suesung.com/post/lsjh1/</guid>
+      <guid>/post/lsjh1/</guid>
       <description>1. 问题的背景、Wallace-Bolyai-Gerwien 定理 2. 证明准备 2.1. 线性代数预备知识 2.2. Dehn 不变量 2.3. Dehn-Hadwiger 定理 3. Hilbert 第三问题的解答 知乎链接: Hilbert 第三问题 (1): Wallace-Bolyai-Gerwien 定理——两平面多边形面积相等则可经有限次剪拼组成另一个, Hilbert 第三问题 (2): Dehn 不变量、Dehn-Hadwiger 定理、问题的解答.
 1. 问题的背景、Wallace-Bolyai-Gerwien 定理 Hilbert 第三问题是关于多面体 (多边形) 等可分的一个问题. 首先给出等可分的定义.
 Definition 称 $\mathbb{R}^n$ 中的两个多面体是等可分的 (scissors-congruent), 如果它们可以被分割成有限个多面体 $P_1, P_2, \cdots , P_n$ 与 $Q_1, Q_2, \cdots , Q_n$, 使得 $P_i$ 与 $Q_i$ 全等, $\forall i=1,2,\cdots,n$.
@@ -49,10 +49,10 @@ Theorem (Wallace-Bolyai-Gerwien) $\mathbb{R}^2$ 中的两个多边形是等可�
     
     <item>
       <title>About</title>
-      <link>www.suesung.com/about/</link>
+      <link>/about/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>www.suesung.com/about/</guid>
+      <guid>/about/</guid>
       <description>Welcome to my personal blog.
 Contact me:
 Github-Charle4
@@ -62,10 +62,10 @@ Personal homepage</description>
     
     <item>
       <title>Contact</title>
-      <link>www.suesung.com/contact/</link>
+      <link>/contact/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>www.suesung.com/contact/</guid>
+      <guid>/contact/</guid>
       <description>Github-Charle4
 Zhihu-George
 Personal homepage</description>
@@ -73,10 +73,10 @@ Personal homepage</description>
     
     <item>
       <title></title>
-      <link>www.suesung.com/archives/</link>
+      <link>/archives/</link>
       <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>www.suesung.com/archives/</guid>
+      <guid>/archives/</guid>
       <description></description>
     </item>
     
