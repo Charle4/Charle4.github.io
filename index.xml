@@ -22,9 +22,20 @@ Git 配置代理 # 设置: git config --global http.proxy http://127.0.0.1:port 
     </item>
     
     <item>
+      <title>Contact</title>
+      <link>/contact/</link>
+      <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/contact/</guid>
+      <description>Github-Charle4
+Zhihu-George
+Personal homepage</description>
+    </item>
+    
+    <item>
       <title>剖分正方形为奇数个等面积的三角形</title>
       <link>/post/lsjh2/</link>
-      <pubDate>Wed, 19 Jul 2023 12:42:44 +0800</pubDate>
+      <pubDate>Tue, 19 Jul 2022 12:42:44 +0800</pubDate>
       
       <guid>/post/lsjh2/</guid>
       <description>问题的背景 证明准备 序关系 域的赋值 Sperner 引理 主要定理 知乎链接: 剖分正方形为奇数个等面积的三角形.
@@ -37,7 +48,7 @@ Git 配置代理 # 设置: git config --global http.proxy http://127.0.0.1:port 
     <item>
       <title>Hilbert 第三问题</title>
       <link>/post/lsjh1/</link>
-      <pubDate>Wed, 19 Jul 2023 12:21:29 +0800</pubDate>
+      <pubDate>Tue, 19 Jul 2022 12:21:29 +0800</pubDate>
       
       <guid>/post/lsjh1/</guid>
       <description>1. 问题的背景、Wallace-Bolyai-Gerwien 定理 2. 证明准备 2.1. 线性代数预备知识 2.2. Dehn 不变量 2.3. Dehn-Hadwiger 定理 3. Hilbert 第三问题的解答 知乎链接: Hilbert 第三问题 (1): Wallace-Bolyai-Gerwien 定理——两平面多边形面积相等则可经有限次剪拼组成另一个, Hilbert 第三问题 (2): Dehn 不变量、Dehn-Hadwiger 定理、问题的解答.
@@ -50,23 +61,12 @@ Theorem (Wallace-Bolyai-Gerwien) $\mathbb{R}^2$ 中的两个多边形是等可�
     <item>
       <title>About</title>
       <link>/about/</link>
-      <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
       <description>Welcome to my personal blog.
 Contact me:
 Github-Charle4
-Zhihu-George
-Personal homepage</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>/contact/</link>
-      <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>/contact/</guid>
-      <description>Github-Charle4
 Zhihu-George
 Personal homepage</description>
     </item>
