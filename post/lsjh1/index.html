@@ -342,15 +342,15 @@ code.has-jax {
 <p>这个定理有一个构造性的证明, 是将多边形分割拼接成面积相等的正方形.</p>
 <p><em><strong>Proof.</strong></em> 必要性是显然的, 充分性的证明大致分为如下几个步骤.</p>
 <p>第一步, 每个多边形都可以被切割成三角形. 有很多种方法可以做到这一点, 例如对于凸多边形, 可以依次切断每个顶点, 对更复杂的多边形, 可以作一条不平行于多边形任何边的线, 并通过多边形的每个顶点绘制一条平行于这条线的线, 这会将多边形分为三角形和梯形, 进而可以将梯形分为三角形. 如图所示.</p>
-<p><img src="https://cdn.staticaly.com/gh/Charle4/Image-Hosting-Service@main/20230127/%E5%87%B8%E5%A4%9A%E8%BE%B9%E5%BD%A2.6fjhiukbe400.webp" alt="凸多边形"></p>
-<p><img src="https://cdn.staticaly.com/gh/Charle4/Image-Hosting-Service@main/20230127/%E5%A4%8D%E6%9D%82%E5%A4%9A%E8%BE%B9%E5%BD%A2.5wtsnohfwbs0.webp" alt="复杂多边形"></p>
+<p><img src="https://github.com//Charle4/Image-Hosting-Service/raw/main/20230127/%E5%87%B8%E5%A4%9A%E8%BE%B9%E5%BD%A2.6fjhiukbe400.webp" alt="凸多边形"></p>
+<p><img src="https://github.com//Charle4/Image-Hosting-Service/raw/main/20230127/%E5%A4%8D%E6%9D%82%E5%A4%9A%E8%BE%B9%E5%BD%A2.5wtsnohfwbs0.webp" alt="复杂多边形"></p>
 <p>第二步, 每个三角形都可以分割并拼接成平行四边形. 只需如图沿其中线分开再拼接即可. 要证得到的图形是平行四边形, 只需证明 $BD // CD^\prime$. 而这由于 $\angle{BDE} + \angle{ADE} = \pi$ 显然成立.</p>
-<p><img src="https://cdn.staticaly.com/gh/Charle4/Image-Hosting-Service@main/20230127/%E4%B8%89%E8%A7%92%E5%BD%A2.bbgkuyeskag.webp" alt="三角形-&gt;平行四边形"></p>
+<p><img src="https://github.com//Charle4/Image-Hosting-Service/raw/main/20230127/%E4%B8%89%E8%A7%92%E5%BD%A2.bbgkuyeskag.webp" alt="三角形-&gt;平行四边形"></p>
 <p>第三步, 每个平行四边形都可以分割再拼接成矩形. 过平行四边形的一个顶点做高, 若垂足在边上, 直接把平行四边形沿这条高分开再拼接. 如果平行四边形的底边较 &ldquo;短&rdquo; 以致于垂足不在边上, 需要先沿对角线分开再变成底边较 &ldquo;长&rdquo; 的平行四边形. 如图所示.</p>
-<p><img src="https://cdn.staticaly.com/gh/Charle4/Image-Hosting-Service@main/20230127/%E5%B9%B3%E8%A1%8C%E5%9B%9B%E8%BE%B9%E5%BD%A2to%E7%9F%A9%E5%BD%A2.1hdtn0jc041.webp" alt="平行四边形-&gt;矩形"></p>
-<p><img src="https://cdn.staticaly.com/gh/Charle4/Image-Hosting-Service@main/20230127/%E7%9F%AD%E5%B9%B3%E8%A1%8C%E5%9B%9B%E8%BE%B9%E5%BD%A2.35g3cbv94u8.webp" alt="底边较 &amp;ldquo;短&amp;rdquo; 的平行四边形"></p>
+<p><img src="https://github.com//Charle4/Image-Hosting-Service/raw/main/20230127/%E5%B9%B3%E8%A1%8C%E5%9B%9B%E8%BE%B9%E5%BD%A2to%E7%9F%A9%E5%BD%A2.1hdtn0jc041.webp" alt="平行四边形-&gt;矩形"></p>
+<p><img src="https://github.com//Charle4/Image-Hosting-Service/raw/main/20230127/%E7%9F%AD%E5%B9%B3%E8%A1%8C%E5%9B%9B%E8%BE%B9%E5%BD%A2.35g3cbv94u8.webp" alt="底边较 &amp;ldquo;短&amp;rdquo; 的平行四边形"></p>
 <p>第四步, 每个矩形都可以分割拼接成正方形. 设矩形的两边为 $a$ 和 $b$, 若 $a=b$ 则矩形就是正方形. 若 $a \neq b$, 如图构造一条长为 $c=\sqrt{a b}$ 的切割线, 平移小三角形得到一个平行四边形, 它的一条边长为 $c$. 用第三步的方法固定 $c$ 边把这个平行四边形切割拼接成矩形, 由于 $c^{2}=a b$ 正好是原平行四边形的面积, 所以切割拼接所得的一边长为 $c$ 的矩形必定是边长为 $c$ 的正方形.</p>
-<p><img src="https://cdn.staticaly.com/gh/Charle4/Image-Hosting-Service@main/20230127/%E7%9F%A9%E5%BD%A2to%E5%B9%B3%E8%A1%8C%E5%9B%9B%E8%BE%B9%E5%BD%A2.16y3jdkh9uik.webp" alt="矩形-&gt;平行四边形"></p>
+<p><img src="https://github.com//Charle4/Image-Hosting-Service/raw/main/20230127/%E7%9F%A9%E5%BD%A2to%E5%B9%B3%E8%A1%8C%E5%9B%9B%E8%BE%B9%E5%BD%A2.16y3jdkh9uik.webp" alt="矩形-&gt;平行四边形"></p>
 <p>第五步, 两个正方形可以分割拼接成一个大正方形, 进而任意有限个正方形都可以分割拼接成一个正方形. 将两个正方形分割拼接成一个大正方形也有很多种方法可以做到, 其中一种方法如图所示, 这也是勾股定理的一种证明方式.</p>
 <p><img src="https://cdn.staticaly.com/gh/Charle4/Image-Hosting-Service@main/20230127/%E6%AD%A3%E6%96%B9%E5%BD%A2+%E6%AD%A3%E6%96%B9%E5%BD%A2.54jhbsdmvw40.jpg" alt="正方形+正方形"></p>
 <p>这样我们就证明了每个多边形都可以分割再拼接成与它面积相等的正方形, 即与和它面积相等的正方形等可分, 进而任意两个面积相等的多边形都等可分. $\quad \square$</p>
@@ -411,8 +411,8 @@ $$
 则 $n\left| n^k\right.=A_{2k}$, 矛盾. $\quad \square$</p>
 <p>下面我们可以给出两个不是等可分的底面全等, 高相等的四面体.</p>
 <p>如图所示, 设 $T_1, T_2$ 为两个四面体, 其底面 $ABC$ 全等, 都是直角边长为 $1$ 的等腰直角三角形, $\angle A$ 为直角; $T_1$ 的边 $DA$ 与底面 $ABC$ 垂直, $T_2$ 的边 $DC$ 与底面 $ABC$ 垂直.</p>
-<p><img src="https://cdn.staticaly.com/gh/Charle4/Image-Hosting-Service@main/20230127/T_1.6x3x5p87uqo0.jpg" alt="T1"></p>
-<p><img src="https://cdn.staticaly.com/gh/Charle4/Image-Hosting-Service@main/20230127/T_2.7asxhpomx3c0.jpg" alt="T2"></p>
+<p><img src="https://github.com/Charle4/Image-Hosting-Service/raw/main/20230127/T_1.6x3x5p87uqo0.jpg" alt="T1"></p>
+<p><img src="https://github.com/Charle4/Image-Hosting-Service/raw/main/20230127/T_2.7asxhpomx3c0.jpg" alt="T2"></p>
 <p>$T_1$ 有三条长度为 $1$ 的相互垂直的边 $AB, AC, AD$. 设 $E$ 为 $BC$ 边的中点, 二面角 $D-BC-A = \varphi$, 则 $\cos \varphi =\frac{AE}{DE}=\frac{\frac{\sqrt{2}}{2}}{\frac{\sqrt{6}}{2}}=\frac{1}{\sqrt{3}}$, $\varphi=\arccos \frac{1}{\sqrt{3}}$. 令 $M=\left\{\frac{\pi}{2}, \arccos \frac{1}{\sqrt{3}}, \pi\right\}$, 根据前面的引理, $\frac{1}{\pi} \arccos \frac{1}{\sqrt{3}} \notin \mathbb{Q}$, 故 $\dim V(M)=2$, $V(M)=L\left(\arccos \frac{1}{\sqrt{3}}, \pi\right)$. 定义 $V(M)$ 上的线性映射 $f$, 我们只需定义 $f(\pi)=0$, $f\left(\arccos \frac{1}{\sqrt{3}}\right)=1$. 则
 $$
 D_{f}\left(T_{1}\right)=3 \sqrt{2} \cdot f\left(\arccos \frac{1}{\sqrt{3}}\right)=3 \sqrt{2}.\
