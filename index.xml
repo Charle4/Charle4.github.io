@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2023, Charles IV; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 20 Jul 2023 10:58:52 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Oct 2023 20:17:18 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>科学计算笔记</title>
+      <link>/post/cc_1_1/</link>
+      <pubDate>Mon, 16 Oct 2023 20:17:18 +0800</pubDate>
+      
+      <guid>/post/cc_1_1/</guid>
+      <description>PreviousNext &amp;nbsp; &amp;nbsp;/ [pdf]View the PDF file here.</description>
+    </item>
+    
     <item>
       <title>Windows 下为某些特殊应用配置系统代理</title>
       <link>/post/proxy/</link>
