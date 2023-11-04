@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2023, Charles IV; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 20 Jul 2023 10:58:52 +0800</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 Nov 2023 20:06:17 +0800</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learning Notes</title>
+      <link>/post/ln/</link>
+      <pubDate>Sat, 04 Nov 2023 20:06:17 +0800</pubDate>
+      
+      <guid>/post/ln/</guid>
+      <description> Learning Notes Contents Learning Notes Notes taken during the course of some college math courses written in Chinese. Created as a personal record and backup, and shared in hopes of assisting others.
+Contents 数理统计: 参数估计与假设检验 点集拓扑学: 拓扑空间, 连续映射, 连通性与紧致性 初等数论: 整除, 素数, 同余; 不定方程, 同余方程; 平方剩余, 二次互反律 </description>
+    </item>
+    
     <item>
       <title>Windows 下为某些特殊应用配置系统代理</title>
       <link>/post/proxy/</link>
