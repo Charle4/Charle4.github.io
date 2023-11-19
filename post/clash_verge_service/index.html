@@ -47,13 +47,19 @@
   />
 
   
-  <title>Charles IV</title>
+  <title>Clash Verge 无法安装服务模式 (Clash Verge Service) 解决方案 - Charles IV</title>
 
   
   <meta name="theme-color" />
   
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+  <meta name="description" content="删除已经安装的 Clash Verge Service 管理员权限执行
+sc delete clash_verge_service 注册表中删除服务 计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\clash_verge_service 删除整个 \clash_verge_service.
+即可重新安装 若仍无法安装, 可以尝试程序目录中管理员权限执行 /resources/install-service.exe.
+参考 win11无法安装Clash Verge Service [BUG]win1122h2服务模式打不开,代理生效极慢meta核心 " />
+  <meta
+    name="author"
+    content=""
+  />
   
 
   
@@ -64,6 +70,12 @@
   
   <link rel="preload stylesheet" as="style" href="/main.min.css" />
 
+  
+  <script
+    defer
+    src="highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
   
 
   
@@ -92,13 +104,6 @@
 
   
   
-  <link
-    rel="alternate"
-    type="application/rss&#43;xml"
-    href="/index.xml"
-    title="Charles IV"
-  />
-  
 
   
   
@@ -109,18 +114,32 @@
   
   
   
-  <meta property="og:title" content="" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="/" />
+  <meta property="og:title" content="Clash Verge 无法安装服务模式 (Clash Verge Service) 解决方案" />
+<meta property="og:description" content="删除已经安装的 Clash Verge Service 管理员权限执行
+sc delete clash_verge_service 注册表中删除服务 计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\clash_verge_service 删除整个 \clash_verge_service.
+即可重新安装 若仍无法安装, 可以尝试程序目录中管理员权限执行 /resources/install-service.exe.
+参考 win11无法安装Clash Verge Service [BUG]win1122h2服务模式打不开,代理生效极慢meta核心 " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/clash_verge_service/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-11-19T13:46:02+08:00" />
+<meta property="article:modified_time" content="2023-11-19T13:46:02+08:00" />
 
   
-  <meta itemprop="name" content="">
-<meta itemprop="description" content="">
+  <meta itemprop="name" content="Clash Verge 无法安装服务模式 (Clash Verge Service) 解决方案">
+<meta itemprop="description" content="删除已经安装的 Clash Verge Service 管理员权限执行
+sc delete clash_verge_service 注册表中删除服务 计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\clash_verge_service 删除整个 \clash_verge_service.
+即可重新安装 若仍无法安装, 可以尝试程序目录中管理员权限执行 /resources/install-service.exe.
+参考 win11无法安装Clash Verge Service [BUG]win1122h2服务模式打不开,代理生效极慢meta核心 "><meta itemprop="datePublished" content="2023-11-19T13:46:02+08:00" />
+<meta itemprop="dateModified" content="2023-11-19T13:46:02+08:00" />
+<meta itemprop="wordCount" content="21">
+<meta itemprop="keywords" content="" />
   
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Clash Verge 无法安装服务模式 (Clash Verge Service) 解决方案"/>
+<meta name="twitter:description" content="删除已经安装的 Clash Verge Service 管理员权限执行
+sc delete clash_verge_service 注册表中删除服务 计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\clash_verge_service 删除整个 \clash_verge_service.
+即可重新安装 若仍无法安装, 可以尝试程序目录中管理员权限执行 /resources/install-service.exe.
+参考 win11无法安装Clash Verge Service [BUG]win1122h2服务模式打不开,代理生效极慢meta核心 "/>
 
   
   
@@ -282,106 +301,58 @@ code.has-jax {
     >
       
 
+<article>
+  <header class="mb-20">
+    <h1 class="!my-0 pb-2.5">Clash Verge 无法安装服务模式 (Clash Verge Service) 解决方案</h1>
 
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-<div class="-mt-4 mb-20 flex items-start">
-  
-  <div
-    class="mr-5 shrink-0 rounded-full border-[0.5px] border-black/10 bg-white/50 p-3 shadow-xl dark:bg-white/80"
-  >
-    <img
-      class="my-0 h-14 w-14 rounded-full !bg-black/5 hover:animate-spin dark:!bg-black/80"
-      src="https://github.com/Charle4/Image-Hosting-Service/blob/main/20230207/image.49gxhl9trh60.jpg?raw=true"
-    />
-  </div>
-  
-  
-  <div>
-    <h1 class="mt-1.5 mb-3 text-3xl font-bold">Charles</h1>
-    <div class="break-words">
-      Personal Blog of Charles
+    
+    <div class="text-sm opacity-60">
+      
+      <time>Nov 19, 2023</time>
+      
+      
     </div>
-  </div>
+    
+  </header>
+
+  <section><h2 id="删除已经安装的-clash-verge-service">删除已经安装的 Clash Verge Service</h2>
+<p>管理员权限执行</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sc delete clash_verge_service
+</span></span></code></pre></div><h2 id="注册表中删除服务">注册表中删除服务</h2>
+<p><code>计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\clash_verge_service</code> 删除整个 <code>\clash_verge_service</code>.</p>
+<h2 id="即可重新安装">即可重新安装</h2>
+<p>若仍无法安装, 可以尝试程序目录中管理员权限执行 <code>/resources/install-service.exe</code>.</p>
+<h2 id="参考">参考</h2>
+<ul>
+<li><a href="https://github.com/zzzgydi/clash-verge/issues/355">win11无法安装Clash Verge Service</a></li>
+<li><a href="https://github.com/zzzgydi/clash-verge/issues/862">[BUG]win1122h2服务模式打不开,代理生效极慢meta核心</a></li>
+</ul>
+</section>
+
   
-</div>
+  
 
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 no-underline hover:bg-black/[2%]"
+      href="/post/ln/"
+      ><span>Learning Notes</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
 
+  
+  
 
-
-<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
-  <h2 class="!my-0 pb-1 !leading-none">Clash Verge 无法安装服务模式 (Clash Verge Service) 解决方案</h2>
-  <time class="text-sm opacity-60"
-    >Nov 19, 2023</time
-  >
-  <a class="absolute inset-0" href="/post/clash_verge_service/"></a>
-</section>
-
-
-
-
-
-<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
-  <h2 class="!my-0 pb-1 !leading-none">Learning Notes</h2>
-  <time class="text-sm opacity-60"
-    >Nov 4, 2023</time
-  >
-  <a class="absolute inset-0" href="/post/ln/"></a>
-</section>
-
-
-
-
-
-<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
-  <h2 class="!my-0 pb-1 !leading-none">Windows 下为某些特殊应用配置系统代理</h2>
-  <time class="text-sm opacity-60"
-    >Jul 20, 2023</time
-  >
-  <a class="absolute inset-0" href="/post/proxy/"></a>
-</section>
-
-
-
-
-
-<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
-  <h2 class="!my-0 pb-1 !leading-none">剖分正方形为奇数个等面积的三角形</h2>
-  <time class="text-sm opacity-60"
-    >Jul 19, 2022</time
-  >
-  <a class="absolute inset-0" href="/post/lsjh2/"></a>
-</section>
-
-
-
-
-
-<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
-  <h2 class="!my-0 pb-1 !leading-none">Hilbert 第三问题</h2>
-  <time class="text-sm opacity-60"
-    >Jul 19, 2022</time
-  >
-  <a class="absolute inset-0" href="/post/lsjh1/"></a>
-</section>
-
-
-
-
+  
+  
+</article>
 
 
     </main>

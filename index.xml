@@ -7,7 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2023, Charles IV; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 04 Nov 2023 20:06:17 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Nov 2023 13:46:02 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Clash Verge 无法安装服务模式 (Clash Verge Service) 解决方案</title>
+      <link>/post/clash_verge_service/</link>
+      <pubDate>Sun, 19 Nov 2023 13:46:02 +0800</pubDate>
+      
+      <guid>/post/clash_verge_service/</guid>
+      <description>删除已经安装的 Clash Verge Service 管理员权限执行
+sc delete clash_verge_service 注册表中删除服务 计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\clash_verge_service 删除整个 \clash_verge_service.
+即可重新安装 若仍无法安装, 可以尝试程序目录中管理员权限执行 /resources/install-service.exe.
+参考 win11无法安装Clash Verge Service [BUG]win1122h2服务模式打不开,代理生效极慢meta核心 </description>
+    </item>
+    
     <item>
       <title>Learning Notes</title>
       <link>/post/ln/</link>
