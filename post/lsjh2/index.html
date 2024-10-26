@@ -44,7 +44,7 @@
   lang="zh"
   dir="ltr"
 >
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta
@@ -93,14 +93,14 @@ Definition (偏序) 称集合 $S$ 上的关系 $\leqslant$ 为偏序 (partial or
   
   
   
-  <link rel="preload stylesheet" as="style" href="//localhost:1313/main.min.css" />
+  <link rel="preload stylesheet" as="style" href="/main.min.css" />
 
   
   
   
   
   
-  <link rel="preload" as="image" href="//localhost:1313/theme.svg" />
+  <link rel="preload" as="image" href="/theme.svg" />
 
   
   
@@ -112,9 +112,9 @@ Definition (偏序) 称集合 $S$ 上的关系 $\leqslant$ 为偏序 (partial or
 
   
   
-  <link rel="preload" as="image" href="//localhost:1313/github.svg" />
+  <link rel="preload" as="image" href="/github.svg" />
   
-  <link rel="preload" as="image" href="//localhost:1313/rss.svg" />
+  <link rel="preload" as="image" href="/rss.svg" />
   
   
 
@@ -122,7 +122,7 @@ Definition (偏序) 称集合 $S$ 上的关系 $\leqslant$ 为偏序 (partial or
   
   <script
     defer
-    src="//localhost:1313/highlight.min.js"
+    src="/highlight.min.js"
     onload="hljs.initHighlightingOnLoad();"
   ></script>
   
@@ -173,11 +173,11 @@ Definition (偏序) 称集合 $S$ 上的关系 $\leqslant$ 为偏序 (partial or
   
   <link
     rel="icon"
-    href="//localhost:1313/favicon.ico"
+    href="/favicon.ico"
   />
   <link
     rel="apple-touch-icon"
-    href="//localhost:1313/apple-touch-icon.png"
+    href="/apple-touch-icon.png"
   />
 
   
@@ -186,12 +186,56 @@ Definition (偏序) 称集合 $S$ 上的关系 $\leqslant$ 为偏序 (partial or
   
   
   
+  
+  
+  
+  <meta itemprop="name" content="剖分正方形为奇数个等面积的三角形">
+  <meta itemprop="description" content="问题的背景 证明准备 序关系 域的赋值 Sperner 引理 主要定理 知乎链接: 剖分正方形为奇数个等面积的三角形.
+问题的背景 如果要把一个正方形剖分成面积相等的 $n$ 个三角形. 当 $n$ 是偶数时, 这是容易实现的. 比如说, 先把正方形平分为 $\dfrac{n}{2}$​ 个矩形, 再在分出来每个矩形里面画一条对角线 (如下图). 而 $n$ 是奇数时, 是否有可能将一个正方形平分为 $n$ 个面积相等的三角形?
+这个问题在 1965 年被 Fred Richman 提出: 能否将一个正方形剖分成奇数个面积相等的三角形? 1968 年, John Thomas 证明了顶点为 $(0,0), (0,1), (1,0), (1,1)$ 的正方形不能剖分成奇数个面积相等的所有顶点都具有奇数分母的有理坐标的三角形. 直到 1970 年, Paul Monsky 才最终解决了这个问题: 将一个正方形剖分为奇数个等面积的三角形是不可能的!
+这个看似是欧氏几何中的经典题目, 答案早已为人所知的 “简单问题” 在五十多年前才得到证明, 在证明里还用到了域的赋值理论等较为高等的工具!
+证明准备 序关系 Definition (偏序) 称集合 $S$ 上的关系 $\leqslant$ 为偏序 (partial order) 关系, 如果它满足:">
+  <meta itemprop="datePublished" content="2022-07-19T12:42:44+08:00">
+  <meta itemprop="dateModified" content="2022-07-19T12:42:44+08:00">
+  <meta itemprop="wordCount" content="1375">
+  
+  <meta property="og:url" content="/post/lsjh2/">
+  <meta property="og:site_name" content="Charles IV">
+  <meta property="og:title" content="剖分正方形为奇数个等面积的三角形">
+  <meta property="og:description" content="问题的背景 证明准备 序关系 域的赋值 Sperner 引理 主要定理 知乎链接: 剖分正方形为奇数个等面积的三角形.
+问题的背景 如果要把一个正方形剖分成面积相等的 $n$ 个三角形. 当 $n$ 是偶数时, 这是容易实现的. 比如说, 先把正方形平分为 $\dfrac{n}{2}$​ 个矩形, 再在分出来每个矩形里面画一条对角线 (如下图). 而 $n$ 是奇数时, 是否有可能将一个正方形平分为 $n$ 个面积相等的三角形?
+这个问题在 1965 年被 Fred Richman 提出: 能否将一个正方形剖分成奇数个面积相等的三角形? 1968 年, John Thomas 证明了顶点为 $(0,0), (0,1), (1,0), (1,1)$ 的正方形不能剖分成奇数个面积相等的所有顶点都具有奇数分母的有理坐标的三角形. 直到 1970 年, Paul Monsky 才最终解决了这个问题: 将一个正方形剖分为奇数个等面积的三角形是不可能的!
+这个看似是欧氏几何中的经典题目, 答案早已为人所知的 “简单问题” 在五十多年前才得到证明, 在证明里还用到了域的赋值理论等较为高等的工具!
+证明准备 序关系 Definition (偏序) 称集合 $S$ 上的关系 $\leqslant$ 为偏序 (partial order) 关系, 如果它满足:">
+  <meta property="og:locale" content="zh">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2022-07-19T12:42:44+08:00">
+    <meta property="article:modified_time" content="2022-07-19T12:42:44+08:00">
+
+  
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="剖分正方形为奇数个等面积的三角形">
+  <meta name="twitter:description" content="问题的背景 证明准备 序关系 域的赋值 Sperner 引理 主要定理 知乎链接: 剖分正方形为奇数个等面积的三角形.
+问题的背景 如果要把一个正方形剖分成面积相等的 $n$ 个三角形. 当 $n$ 是偶数时, 这是容易实现的. 比如说, 先把正方形平分为 $\dfrac{n}{2}$​ 个矩形, 再在分出来每个矩形里面画一条对角线 (如下图). 而 $n$ 是奇数时, 是否有可能将一个正方形平分为 $n$ 个面积相等的三角形?
+这个问题在 1965 年被 Fred Richman 提出: 能否将一个正方形剖分成奇数个面积相等的三角形? 1968 年, John Thomas 证明了顶点为 $(0,0), (0,1), (1,0), (1,1)$ 的正方形不能剖分成奇数个面积相等的所有顶点都具有奇数分母的有理坐标的三角形. 直到 1970 年, Paul Monsky 才最终解决了这个问题: 将一个正方形剖分为奇数个等面积的三角形是不可能的!
+这个看似是欧氏几何中的经典题目, 答案早已为人所知的 “简单问题” 在五十多年前才得到证明, 在证明里还用到了域的赋值理论等较为高等的工具!
+证明准备 序关系 Definition (偏序) 称集合 $S$ 上的关系 $\leqslant$ 为偏序 (partial order) 关系, 如果它满足:">
+
+  
+  
+
+  
+  <link rel="canonical" href="/post/lsjh2/" />
+  
+  
 </head>
 
   <body class="text-black duration-200 ease-out dark:text-white">
     <header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
   <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
-    <a class="-translate-y-[1px] text-2xl font-medium" href="//localhost:1313/"
+    <a class="-translate-y-[1px] text-2xl font-medium" href="/"
       >Charles IV</a
     >
     <div
@@ -298,7 +342,7 @@ Definition (偏序) 称集合 $S$ 上的关系 $\leqslant$ 为偏序 (partial or
       <a
         class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
         style="--url: url(./rss.svg)"
-        href="//localhost:1313/index.xml"
+        href="/index.xml"
         target="_blank"
         rel="alternate"
       >
@@ -487,12 +531,12 @@ $$
     class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg !leading-[1.2] *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
   >
     
-    <a class="ltr:pr-3 rtl:pl-3" href="//localhost:1313/post/test/"
-      ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>The Test Blog</span></a
+    <a class="ltr:pr-3 rtl:pl-3" href="/post/proxy/"
+      ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>Windows 下为某些特殊应用配置系统代理</span></a
     >
     
     
-    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="//localhost:1313/post/lsjh1/"
+    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="/post/lsjh1/"
       ><span>Hilbert 第三问题</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
     >
     
