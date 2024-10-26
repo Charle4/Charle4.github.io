@@ -67,6 +67,7 @@
 Anaconda 配置代理
 pip 配置代理
 Git 配置代理
+WSL 配置代理
 
 
 Anaconda 配置代理
@@ -194,18 +195,18 @@ git config -–global –unset https.proxy
   
   
   <meta itemprop="name" content="Windows 下为某些特殊应用配置系统代理">
-  <meta itemprop="description" content="Anaconda 配置代理 pip 配置代理 Git 配置代理 Anaconda 配置代理 在 C:\Users\username\.condarc 中添加或修改如下内容：
+  <meta itemprop="description" content="Anaconda 配置代理 pip 配置代理 Git 配置代理 WSL 配置代理 Anaconda 配置代理 在 C:\Users\username\.condarc 中添加或修改如下内容：
 proxy_servers: http: http://127.0.0.1:port https: http://127.0.0.1:port pip 配置代理 在 C:\Users\username\pip\pip.ini 中添加或修改如下内容：
 [global] proxy=http://127.0.0.1:port 在终端里运行 pip -v config list 检查配置是否生效.
 Git 配置代理 # 设置: git config --global http.proxy http://127.0.0.1:port git config --global https.proxy http://127.0.0.1:port # 取消: git config -–global –unset http.proxy git config -–global –unset https.proxy 有的节点无法代理 SSH 协议, 可以使用 SSH over HTTPS 通过 443 端口使用 SSH:">
   <meta itemprop="datePublished" content="2023-07-20T10:58:52+08:00">
   <meta itemprop="dateModified" content="2023-07-20T10:58:52+08:00">
-  <meta itemprop="wordCount" content="122">
+  <meta itemprop="wordCount" content="124">
   
   <meta property="og:url" content="/post/proxy/">
   <meta property="og:site_name" content="Charles IV">
   <meta property="og:title" content="Windows 下为某些特殊应用配置系统代理">
-  <meta property="og:description" content="Anaconda 配置代理 pip 配置代理 Git 配置代理 Anaconda 配置代理 在 C:\Users\username\.condarc 中添加或修改如下内容：
+  <meta property="og:description" content="Anaconda 配置代理 pip 配置代理 Git 配置代理 WSL 配置代理 Anaconda 配置代理 在 C:\Users\username\.condarc 中添加或修改如下内容：
 proxy_servers: http: http://127.0.0.1:port https: http://127.0.0.1:port pip 配置代理 在 C:\Users\username\pip\pip.ini 中添加或修改如下内容：
 [global] proxy=http://127.0.0.1:port 在终端里运行 pip -v config list 检查配置是否生效.
 Git 配置代理 # 设置: git config --global http.proxy http://127.0.0.1:port git config --global https.proxy http://127.0.0.1:port # 取消: git config -–global –unset http.proxy git config -–global –unset https.proxy 有的节点无法代理 SSH 协议, 可以使用 SSH over HTTPS 通过 443 端口使用 SSH:">
@@ -219,7 +220,7 @@ Git 配置代理 # 设置: git config --global http.proxy http://127.0.0.1:port 
   
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Windows 下为某些特殊应用配置系统代理">
-  <meta name="twitter:description" content="Anaconda 配置代理 pip 配置代理 Git 配置代理 Anaconda 配置代理 在 C:\Users\username\.condarc 中添加或修改如下内容：
+  <meta name="twitter:description" content="Anaconda 配置代理 pip 配置代理 Git 配置代理 WSL 配置代理 Anaconda 配置代理 在 C:\Users\username\.condarc 中添加或修改如下内容：
 proxy_servers: http: http://127.0.0.1:port https: http://127.0.0.1:port pip 配置代理 在 C:\Users\username\pip\pip.ini 中添加或修改如下内容：
 [global] proxy=http://127.0.0.1:port 在终端里运行 pip -v config list 检查配置是否生效.
 Git 配置代理 # 设置: git config --global http.proxy http://127.0.0.1:port git config --global https.proxy http://127.0.0.1:port # 取消: git config -–global –unset http.proxy git config -–global –unset https.proxy 有的节点无法代理 SSH 协议, 可以使用 SSH over HTTPS 通过 443 端口使用 SSH:">
@@ -382,6 +383,7 @@ Git 配置代理 # 设置: git config --global http.proxy http://127.0.0.1:port 
 <li><a href="#anaconda-%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%90%86">Anaconda 配置代理</a></li>
 <li><a href="#pip-%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%90%86">pip 配置代理</a></li>
 <li><a href="#git-%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%90%86">Git 配置代理</a></li>
+<li><a href="#wsl-%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%90%86">WSL 配置代理</a></li>
 </ul>
 <!-- /TOC -->
 <h2 id="anaconda-配置代理">Anaconda 配置代理</h2>
