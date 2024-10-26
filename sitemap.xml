@@ -2,40 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/</loc>
+    <loc>//localhost:1313/</loc>
     <lastmod>2023-11-19T13:46:02+08:00</lastmod>
   </url><url>
-    <loc>/post/clash_verge_service/</loc>
+    <loc>//localhost:1313/post/clash_verge_service/</loc>
     <lastmod>2023-11-19T13:46:02+08:00</lastmod>
   </url><url>
-    <loc>/post/</loc>
+    <loc>//localhost:1313/post/</loc>
     <lastmod>2023-11-19T13:46:02+08:00</lastmod>
   </url><url>
-    <loc>/post/ln/</loc>
+    <loc>//localhost:1313/post/latex-vscode/</loc>
+    <lastmod>2023-11-04T22:13:09+08:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/post/ln/</loc>
     <lastmod>2023-11-04T20:06:17+08:00</lastmod>
   </url><url>
-    <loc>/post/proxy/</loc>
+    <loc>//localhost:1313/post/cc_1_1/</loc>
+    <lastmod>2023-10-16T20:17:18+08:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/post/proxy/</loc>
     <lastmod>2023-07-20T10:58:52+08:00</lastmod>
   </url><url>
-    <loc>/contact/</loc>
+    <loc>//localhost:1313/post/test/</loc>
+    <lastmod>2023-02-07T14:58:37+08:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/contact/</loc>
     <lastmod>2023-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/lsjh2/</loc>
+    <loc>//localhost:1313/post/lsjh2/</loc>
     <lastmod>2022-07-19T12:42:44+08:00</lastmod>
   </url><url>
-    <loc>/post/lsjh1/</loc>
+    <loc>//localhost:1313/post/lsjh1/</loc>
     <lastmod>2022-07-19T12:21:29+08:00</lastmod>
   </url><url>
-    <loc>/about/</loc>
+    <loc>//localhost:1313/about/</loc>
     <lastmod>2022-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/archives/</loc>
+    <loc>//localhost:1313/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/%E5%88%86%E7%B1%BB/</loc>
+    <loc>//localhost:1313/%E5%88%86%E7%B1%BB/</loc>
   </url><url>
-    <loc>/%E6%A0%87%E7%AD%BE/</loc>
+    <loc>//localhost:1313/%E6%A0%87%E7%AD%BE/</loc>
   </url><url>
-    <loc>/%E7%B3%BB%E5%88%97/</loc>
+    <loc>//localhost:1313/%E7%B3%BB%E5%88%97/</loc>
   </url>
 </urlset>

@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
+
+
+
+
+
 
 
 
@@ -34,11 +39,12 @@
 
 
 <html
-  class="not-ready text-sm lg:text-base"
+  class="not-ready lg:text-base"
   style="--bg: #fff"
   lang="zh"
+  dir="ltr"
 >
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta
@@ -51,16 +57,30 @@
 
   
   <meta name="theme-color" />
+
   
-  <meta name="description" content="1. 问题的背景、Wallace-Bolyai-Gerwien 定理 2. 证明准备 2.1. 线性代数预备知识 2.2. Dehn 不变量 2.3. Dehn-Hadwiger 定理 3. Hilbert 第三问题的解答 知乎链接: Hilbert 第三问题 (1): Wallace-Bolyai-Gerwien 定理——两平面多边形面积相等则可经有限次剪拼组成另一个, Hilbert 第三问题 (2): Dehn 不变量、Dehn-Hadwiger 定理、问题的解答.
-1. 问题的背景、Wallace-Bolyai-Gerwien 定理 Hilbert 第三问题是关于多面体 (多边形) 等可分的一个问题. 首先给出等可分的定义.
+  
+  
+  
+  <meta name="description" content="
+
+1. 问题的背景、Wallace-Bolyai-Gerwien 定理
+2. 证明准备
+
+2.1. 线性代数预备知识
+2.2. Dehn 不变量
+2.3. Dehn-Hadwiger 定理
+
+
+3. Hilbert 第三问题的解答
+
+
+知乎链接: Hilbert 第三问题 (1): Wallace-Bolyai-Gerwien 定理——两平面多边形面积相等则可经有限次剪拼组成另一个, Hilbert 第三问题 (2): Dehn 不变量、Dehn-Hadwiger 定理、问题的解答.
+1. 问题的背景、Wallace-Bolyai-Gerwien 定理
+Hilbert 第三问题是关于多面体 (多边形) 等可分的一个问题. 首先给出等可分的定义.
 Definition 称 $\mathbb{R}^n$ 中的两个多面体是等可分的 (scissors-congruent), 如果它们可以被分割成有限个多面体 $P_1, P_2, \cdots , P_n$ 与 $Q_1, Q_2, \cdots , Q_n$, 使得 $P_i$ 与 $Q_i$ 全等, $\forall i=1,2,\cdots,n$.
-易知等可分的多面体体积相等, 关于其逆命题, 在 $\mathbb{R}^2$ 中有如下定理, 即面积相等的多边形都是等可分的.
-Theorem (Wallace-Bolyai-Gerwien) $\mathbb{R}^2$ 中的两个多边形是等可分的当且仅当它们面积相等." />
-  <meta
-    name="author"
-    content=""
-  />
+易知等可分的多面体体积相等, 关于其逆命题, 在 $\mathbb{R}^2$ 中有如下定理, 即面积相等的多边形都是等可分的." />
+  <meta name="author" content="Charles" />
   
 
   
@@ -69,20 +89,16 @@ Theorem (Wallace-Bolyai-Gerwien) $\mathbb{R}^2$ 中的两个多边形是等可�
   
   
   
-  <link rel="preload stylesheet" as="style" href="/main.min.css" />
+  <link rel="preload stylesheet" as="style" href="//localhost:1313/main.min.css" />
 
   
-  <script
-    defer
-    src="highlight.min.js"
-    onload="hljs.initHighlightingOnLoad();"
-  ></script>
   
+  
+  
+  
+  <link rel="preload" as="image" href="//localhost:1313/theme.svg" />
 
   
-     
-  <link rel="preload" as="image" href="theme.png" />
-
   
   
   
@@ -91,119 +107,104 @@ Theorem (Wallace-Bolyai-Gerwien) $\mathbb{R}^2$ 中的两个多边形是等可�
   
 
   
-  <link rel="preload" as="image" href="github.svg" />
   
-  <link rel="preload" as="image" href="rss.svg" />
+  <link rel="preload" as="image" href="//localhost:1313/github.svg" />
   
-
-  
-  <link rel="icon" href="favicon.ico" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-
-  
-  <meta name="generator" content="Hugo 0.110.0">
-
+  <link rel="preload" as="image" href="//localhost:1313/rss.svg" />
   
   
 
   
   
-  
-  
-  
-  
-  
-  
-  
-  <meta property="og:title" content="Hilbert 第三问题" />
-<meta property="og:description" content="1. 问题的背景、Wallace-Bolyai-Gerwien 定理 2. 证明准备 2.1. 线性代数预备知识 2.2. Dehn 不变量 2.3. Dehn-Hadwiger 定理 3. Hilbert 第三问题的解答 知乎链接: Hilbert 第三问题 (1): Wallace-Bolyai-Gerwien 定理——两平面多边形面积相等则可经有限次剪拼组成另一个, Hilbert 第三问题 (2): Dehn 不变量、Dehn-Hadwiger 定理、问题的解答.
-1. 问题的背景、Wallace-Bolyai-Gerwien 定理 Hilbert 第三问题是关于多面体 (多边形) 等可分的一个问题. 首先给出等可分的定义.
-Definition 称 $\mathbb{R}^n$ 中的两个多面体是等可分的 (scissors-congruent), 如果它们可以被分割成有限个多面体 $P_1, P_2, \cdots , P_n$ 与 $Q_1, Q_2, \cdots , Q_n$, 使得 $P_i$ 与 $Q_i$ 全等, $\forall i=1,2,\cdots,n$.
-易知等可分的多面体体积相等, 关于其逆命题, 在 $\mathbb{R}^2$ 中有如下定理, 即面积相等的多边形都是等可分的.
-Theorem (Wallace-Bolyai-Gerwien) $\mathbb{R}^2$ 中的两个多边形是等可分的当且仅当它们面积相等." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="/post/lsjh1/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-07-19T12:21:29+08:00" />
-<meta property="article:modified_time" content="2022-07-19T12:21:29+08:00" />
-
-  
-  <meta itemprop="name" content="Hilbert 第三问题">
-<meta itemprop="description" content="1. 问题的背景、Wallace-Bolyai-Gerwien 定理 2. 证明准备 2.1. 线性代数预备知识 2.2. Dehn 不变量 2.3. Dehn-Hadwiger 定理 3. Hilbert 第三问题的解答 知乎链接: Hilbert 第三问题 (1): Wallace-Bolyai-Gerwien 定理——两平面多边形面积相等则可经有限次剪拼组成另一个, Hilbert 第三问题 (2): Dehn 不变量、Dehn-Hadwiger 定理、问题的解答.
-1. 问题的背景、Wallace-Bolyai-Gerwien 定理 Hilbert 第三问题是关于多面体 (多边形) 等可分的一个问题. 首先给出等可分的定义.
-Definition 称 $\mathbb{R}^n$ 中的两个多面体是等可分的 (scissors-congruent), 如果它们可以被分割成有限个多面体 $P_1, P_2, \cdots , P_n$ 与 $Q_1, Q_2, \cdots , Q_n$, 使得 $P_i$ 与 $Q_i$ 全等, $\forall i=1,2,\cdots,n$.
-易知等可分的多面体体积相等, 关于其逆命题, 在 $\mathbb{R}^2$ 中有如下定理, 即面积相等的多边形都是等可分的.
-Theorem (Wallace-Bolyai-Gerwien) $\mathbb{R}^2$ 中的两个多边形是等可分的当且仅当它们面积相等."><meta itemprop="datePublished" content="2022-07-19T12:21:29+08:00" />
-<meta itemprop="dateModified" content="2022-07-19T12:21:29+08:00" />
-<meta itemprop="wordCount" content="924">
-<meta itemprop="keywords" content="" />
-  
-  <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Hilbert 第三问题"/>
-<meta name="twitter:description" content="1. 问题的背景、Wallace-Bolyai-Gerwien 定理 2. 证明准备 2.1. 线性代数预备知识 2.2. Dehn 不变量 2.3. Dehn-Hadwiger 定理 3. Hilbert 第三问题的解答 知乎链接: Hilbert 第三问题 (1): Wallace-Bolyai-Gerwien 定理——两平面多边形面积相等则可经有限次剪拼组成另一个, Hilbert 第三问题 (2): Dehn 不变量、Dehn-Hadwiger 定理、问题的解答.
-1. 问题的背景、Wallace-Bolyai-Gerwien 定理 Hilbert 第三问题是关于多面体 (多边形) 等可分的一个问题. 首先给出等可分的定义.
-Definition 称 $\mathbb{R}^n$ 中的两个多面体是等可分的 (scissors-congruent), 如果它们可以被分割成有限个多面体 $P_1, P_2, \cdots , P_n$ 与 $Q_1, Q_2, \cdots , Q_n$, 使得 $P_i$ 与 $Q_i$ 全等, $\forall i=1,2,\cdots,n$.
-易知等可分的多面体体积相等, 关于其逆命题, 在 $\mathbb{R}^2$ 中有如下定理, 即面积相等的多边形都是等可分的.
-Theorem (Wallace-Bolyai-Gerwien) $\mathbb{R}^2$ 中的两个多边形是等可分的当且仅当它们面积相等."/>
-
-  
+  <script
+    defer
+    src="//localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
   
 
-  <script type="text/javascript"
-        async
-        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$'], ['\\\[','\\\]']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] }
-  }
-});
+  
+  
+  
+  
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"
+  integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"
+  integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+  crossorigin="anonymous"
+></script>
 
-MathJax.Hub.Queue(function() {
-    
-    
-    
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-});
+
+<script>
+  document.addEventListener('DOMContentLoaded', () =>
+    renderMathInElement(document.body, {
+      
+      
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+      ],
+      
+      throwOnError: false,
+    }),
+  );
 </script>
 
-<style>
-code.has-jax {
-    font: inherit;
-    font-size: 100%;
-    background: inherit;
-    border: inherit;
-    color: #515151;
-}
-</style>
+  
+  
+  
 
+  
+  <link
+    rel="icon"
+    href="//localhost:1313/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="//localhost:1313/apple-touch-icon.png"
+  />
+
+  
+  <meta name="generator" content="Hugo 0.136.5">
+
+  
+  
+  
 </head>
 
   <body class="text-black duration-200 ease-out dark:text-white">
-    <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
-  <div class="relative z-50 mr-auto flex items-center">
-    <a
-      class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold"
-      href=""
+    <header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
+  <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
+    <a class="-translate-y-[1px] text-2xl font-medium" href="//localhost:1313/"
       >Charles IV</a
     >
-    <a
-      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
-    ></a>
+    <div
+      class="btn-dark text-[0] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
   </div>
 
-  <a
-    class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
-  ></a>
+  <div
+    class="btn-menu relative z-50 ltr:-mr-8 rtl:-ml-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
 
   
+
   <script>
     
     const htmlClass = document.documentElement.classList;
@@ -219,7 +220,7 @@ code.has-jax {
 
     
     const metaTheme = document.querySelector('meta[name="theme-color"]');
-    const lightBg = `"#fff"`.replace(/"/g, '');
+    const lightBg = '#fff'.replace(/"/g, '');
     const setDark = (isDark) => {
       metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
       htmlClass[isDark ? 'add' : 'remove']('dark');
@@ -252,22 +253,22 @@ code.has-jax {
   >
     
     
-    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse">
       
       <a
-        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
         href="/about/"
         >About</a
       >
       
       <a
-        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
         href="/contact/"
         >Contact</a
       >
       
       <a
-        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
         href="/"
         >Home</a
       >
@@ -277,22 +278,28 @@ code.has-jax {
 
     
     <nav
-      class="mt-12 flex justify-center space-x-10 dark:invert lg:mt-0 lg:ml-12 lg:items-center lg:space-x-6"
+      class="mt-12 flex justify-center space-x-10 rtl:space-x-reverse dark:invert ltr:lg:ml-14 rtl:lg:mr-14 lg:mt-0 lg:items-center"
     >
       
       <a
-        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
         style="--url: url(./github.svg)"
-        href=" https://github.com/Charle4 "
+        href="https://github.com/Charle4"
         target="_blank"
-      ></a>
+        rel="me"
+      >
+        github
+      </a>
       
       <a
-        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
         style="--url: url(./rss.svg)"
-        href=" index.xml "
+        href="//localhost:1313/index.xml"
         target="_blank"
-      ></a>
+        rel="alternate"
+      >
+        rss
+      </a>
       
     </nav>
     
@@ -301,18 +308,20 @@ code.has-jax {
 
 
     <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-20 pb-32 dark:prose-invert"
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
     >
       
 
 <article>
-  <header class="mb-20">
+  <header class="mb-14">
     <h1 class="!my-0 pb-2.5">Hilbert 第三问题</h1>
 
     
-    <div class="text-sm opacity-60">
+    <div class="text-xs antialiased opacity-60">
       
       <time>Jul 19, 2022</time>
+      
+      
       
       
     </div>
@@ -348,7 +357,7 @@ code.has-jax {
 <p><img src="https://github.com//Charle4/Image-Hosting-Service/raw/main/20230127/%E4%B8%89%E8%A7%92%E5%BD%A2.bbgkuyeskag.webp" alt="三角形-&gt;平行四边形"></p>
 <p>第三步, 每个平行四边形都可以分割再拼接成矩形. 过平行四边形的一个顶点做高, 若垂足在边上, 直接把平行四边形沿这条高分开再拼接. 如果平行四边形的底边较 &ldquo;短&rdquo; 以致于垂足不在边上, 需要先沿对角线分开再变成底边较 &ldquo;长&rdquo; 的平行四边形. 如图所示.</p>
 <p><img src="https://github.com//Charle4/Image-Hosting-Service/raw/main/20230127/%E5%B9%B3%E8%A1%8C%E5%9B%9B%E8%BE%B9%E5%BD%A2to%E7%9F%A9%E5%BD%A2.1hdtn0jc041.webp" alt="平行四边形-&gt;矩形"></p>
-<p><img src="https://github.com//Charle4/Image-Hosting-Service/raw/main/20230127/%E7%9F%AD%E5%B9%B3%E8%A1%8C%E5%9B%9B%E8%BE%B9%E5%BD%A2.35g3cbv94u8.webp" alt="底边较 &amp;ldquo;短&amp;rdquo; 的平行四边形"></p>
+<p><img src="https://github.com//Charle4/Image-Hosting-Service/raw/main/20230127/%E7%9F%AD%E5%B9%B3%E8%A1%8C%E5%9B%9B%E8%BE%B9%E5%BD%A2.35g3cbv94u8.webp" alt="底边较 &ldquo;短&rdquo; 的平行四边形"></p>
 <p>第四步, 每个矩形都可以分割拼接成正方形. 设矩形的两边为 $a$ 和 $b$, 若 $a=b$ 则矩形就是正方形. 若 $a \neq b$, 如图构造一条长为 $c=\sqrt{a b}$ 的切割线, 平移小三角形得到一个平行四边形, 它的一条边长为 $c$. 用第三步的方法固定 $c$ 边把这个平行四边形切割拼接成矩形, 由于 $c^{2}=a b$ 正好是原平行四边形的面积, 所以切割拼接所得的一边长为 $c$ 的矩形必定是边长为 $c$ 的正方形.</p>
 <p><img src="https://github.com//Charle4/Image-Hosting-Service/raw/main/20230127/%E7%9F%A9%E5%BD%A2to%E5%B9%B3%E8%A1%8C%E5%9B%9B%E8%BE%B9%E5%BD%A2.16y3jdkh9uik.webp" alt="矩形-&gt;平行四边形"></p>
 <p>第五步, 两个正方形可以分割拼接成一个大正方形, 进而任意有限个正方形都可以分割拼接成一个正方形. 将两个正方形分割拼接成一个大正方形也有很多种方法可以做到, 其中一种方法如图所示, 这也是勾股定理的一种证明方式.</p>
@@ -434,22 +443,29 @@ $$</p>
   
   
   
-  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+  
+  <nav
+    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg !leading-[1.2] *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
+  >
     
-    <a
-      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 no-underline hover:bg-black/[2%]"
-      href="/post/lsjh2/"
-      ><span class="mr-1.5">←</span><span>剖分正方形为奇数个等面积的三角形</span></a
+    <a class="ltr:pr-3 rtl:pl-3" href="//localhost:1313/post/lsjh2/"
+      ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>剖分正方形为奇数个等面积的三角形</span></a
     >
     
     
   </nav>
   
+  
+
+  
+  
 
   
   
 
   
+
+
   
 </article>
 
@@ -457,21 +473,22 @@ $$</p>
     </main>
 
     <footer
-  class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+  class="mx-auto flex h-[4.5rem] max-w-[--w] items-center px-8 text-xs uppercase tracking-wider opacity-60"
 >
   <div class="mr-auto">
-    &copy; 2023
-    <a class="link" href="">Charles IV</a>
+  
+    Copyright © 2023, Charles IV; all rights reserved.
+  
   </div>
   <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
-    >Powered by Hugo️️</a
+    >powered by hugo️️</a
   >️
   <a
     class="link"
     href="https://github.com/nanxiaobei/hugo-paper"
     rel="noopener"
     target="_blank"
-    >▷ Paper 6</a
+    >hugo-paper</a
   >
 </footer>
 

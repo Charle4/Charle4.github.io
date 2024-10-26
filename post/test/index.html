@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
+
+
+
+
+
+
+
 
 
 
@@ -32,11 +39,12 @@
 
 
 <html
-  class="not-ready text-sm lg:text-base"
-  style="--bg: #faf6f1"
+  class="not-ready lg:text-base"
+  style="--bg: #fff"
   lang="zh"
+  dir="ltr"
 >
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta
@@ -49,14 +57,57 @@
 
   
   <meta name="theme-color" />
+
   
-  <meta name="description" content="Test This is a test blog.
-$$ a^2&#43;b^2=c^2. $$
-Previous Next &nbsp; &nbsp; Page: / " />
-  <meta
-    name="author"
-    content=""
-  />
+  
+  
+  
+  <meta name="description" content="Test
+This is a test blog.
+$$
+a^2&#43;b^2=c^2.
+$$
+Hugo 常用命令
+# 构建静态网站
+hugo
+# 本地预览
+hugo server -D
+# 创建新的文章
+hugo new post/test.md
+直接插入 HTML 代码
+这是一段 HTML 代码。
+PDF
+
+
+
+    
+        
+    
+    
+      
+        
+            
+        
+      
+    
+    
+
+
+
+    Previous
+    Next &nbsp; &nbsp;
+    
+       / 
+    
+    [pdf]
+
+
+
+View the PDF file here.
+
+
+" />
+  <meta name="author" content="Charles" />
   
 
   
@@ -65,133 +116,122 @@ Previous Next &nbsp; &nbsp; Page: / " />
   
   
   
-  <link rel="preload stylesheet" as="style" href="/main.min.css" />
+  <link rel="preload stylesheet" as="style" href="//localhost:1313/main.min.css" />
 
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="//localhost:1313/theme.svg" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://github.com/Charle4/Image-Hosting-Service/blob/main/20230207/image.49gxhl9trh60.jpg?raw=true" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="//localhost:1313/github.svg" />
+  
+  <link rel="preload" as="image" href="//localhost:1313/rss.svg" />
+  
+  
+
+  
   
   <script
     defer
-    src="highlight.min.js"
+    src="//localhost:1313/highlight.min.js"
     onload="hljs.initHighlightingOnLoad();"
   ></script>
   
 
   
-   
-  <link rel="preload" as="image" href="theme.png" />
+  
+  
+  
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"
+  integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"
+  integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+  crossorigin="anonymous"
+></script>
 
-  
-  
-  
-  <link rel="preload" as="image" href="https://cdn.staticaly.com/gh/Charle4/Image-Hosting-Service@main/20230207/image.49gxhl9trh60.jpg" />
-  
-  
 
-  
-  <link rel="preload" as="image" href="github.svg" />
-  
-
-  
-  <link rel="icon" href="favicon.ico" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-
-  
-  <meta name="generator" content="Hugo 0.110.0">
-
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <meta property="og:title" content="The Test Blog" />
-<meta property="og:description" content="Test This is a test blog.
-$$ a^2&#43;b^2=c^2. $$
-Previous Next &nbsp; &nbsp; Page: / " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="/post/test/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-02-07T14:58:37+08:00" />
-<meta property="article:modified_time" content="2023-02-07T14:58:37+08:00" />
-
-  
-  <meta itemprop="name" content="The Test Blog">
-<meta itemprop="description" content="Test This is a test blog.
-$$ a^2&#43;b^2=c^2. $$
-Previous Next &nbsp; &nbsp; Page: / "><meta itemprop="datePublished" content="2023-02-07T14:58:37+08:00" />
-<meta itemprop="dateModified" content="2023-02-07T14:58:37+08:00" />
-<meta itemprop="wordCount" content="15">
-<meta itemprop="keywords" content="" />
-  
-  <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="The Test Blog"/>
-<meta name="twitter:description" content="Test This is a test blog.
-$$ a^2&#43;b^2=c^2. $$
-Previous Next &nbsp; &nbsp; Page: / "/>
-
-  
-  
-
-  <script type="text/javascript"
-        async
-        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$'], ['\\\[','\\\]']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] }
-  }
-});
-
-MathJax.Hub.Queue(function() {
-    
-    
-    
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-});
+<script>
+  document.addEventListener('DOMContentLoaded', () =>
+    renderMathInElement(document.body, {
+      
+      
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+      ],
+      
+      throwOnError: false,
+    }),
+  );
 </script>
 
-<style>
-code.has-jax {
-    font: inherit;
-    font-size: 100%;
-    background: inherit;
-    border: inherit;
-    color: #515151;
-}
-</style>
+  
+  
+  
 
+  
+  <link
+    rel="icon"
+    href="//localhost:1313/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="//localhost:1313/apple-touch-icon.png"
+  />
+
+  
+  <meta name="generator" content="Hugo 0.136.5">
+
+  
+  
+  
 </head>
 
   <body class="text-black duration-200 ease-out dark:text-white">
-    <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
-  <div class="relative z-50 mr-auto flex items-center">
-    <a
-      class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold"
-      href=""
+    <header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
+  <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
+    <a class="-translate-y-[1px] text-2xl font-medium" href="//localhost:1313/"
       >Charles IV</a
     >
-    <a
-      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
-    ></a>
+    <div
+      class="btn-dark text-[0] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
   </div>
 
-  <a
-    class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
-  ></a>
+  <div
+    class="btn-menu relative z-50 ltr:-mr-8 rtl:-ml-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
 
   
+
   <script>
     
     const htmlClass = document.documentElement.classList;
@@ -207,7 +247,7 @@ code.has-jax {
 
     
     const metaTheme = document.querySelector('meta[name="theme-color"]');
-    const lightBg = `"#faf6f1"`.replace(/"/g, '');
+    const lightBg = '#fff'.replace(/"/g, '');
     const setDark = (isDark) => {
       metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
       htmlClass[isDark ? 'add' : 'remove']('dark');
@@ -240,18 +280,24 @@ code.has-jax {
   >
     
     
-    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse">
       
       <a
-        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
         href="/about/"
-        >关于</a
+        >About</a
       >
       
       <a
-        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
         href="/contact/"
-        >联系</a
+        >Contact</a
+      >
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/"
+        >Home</a
       >
       
     </nav>
@@ -259,15 +305,28 @@ code.has-jax {
 
     
     <nav
-      class="mt-12 flex justify-center space-x-10 dark:invert lg:mt-0 lg:ml-12 lg:items-center lg:space-x-6"
+      class="mt-12 flex justify-center space-x-10 rtl:space-x-reverse dark:invert ltr:lg:ml-14 rtl:lg:mr-14 lg:mt-0 lg:items-center"
     >
       
       <a
-        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
         style="--url: url(./github.svg)"
-        href=" https://github.com/Charle4 "
+        href="https://github.com/Charle4"
         target="_blank"
-      ></a>
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./rss.svg)"
+        href="//localhost:1313/index.xml"
+        target="_blank"
+        rel="alternate"
+      >
+        rss
+      </a>
       
     </nav>
     
@@ -276,18 +335,20 @@ code.has-jax {
 
 
     <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-20 pb-32 dark:prose-invert"
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
     >
       
 
 <article>
-  <header class="mb-20">
+  <header class="mb-14">
     <h1 class="!my-0 pb-2.5">The Test Blog</h1>
 
     
-    <div class="text-sm opacity-60">
+    <div class="text-xs antialiased opacity-60">
       
-      <time>2023年2月7日</time>
+      <time>Feb 7, 2023</time>
+      
+      
       
       
     </div>
@@ -299,199 +360,262 @@ code.has-jax {
 <p>$$
 a^2+b^2=c^2.
 $$</p>
-<script type="text/javascript" src= '//js/pdf-js/build/pdf.js'></script>
+<h2 id="hugo-常用命令">Hugo 常用命令</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 构建静态网站</span>
+</span></span><span style="display:flex;"><span>hugo
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 本地预览</span>
+</span></span><span style="display:flex;"><span>hugo server -D
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 创建新的文章</span>
+</span></span><span style="display:flex;"><span>hugo new post/test.md
+</span></span></code></pre></div><h2 id="直接插入-html-代码">直接插入 HTML 代码</h2>
+<p>这是一段 <strong>HTML</strong> 代码。</p>
+<h2 id="pdf">PDF</h2>
+<script type="text/javascript" src= '/js/pdf-js/build/pdf.js'></script>
+
 <style>
-#the-canvas {
-  border: 1px solid black;
-  direction: ltr;
-  width: 100%;
-  height: auto;
-  display: none;
-}
-
-#paginator {
-  display: none;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-#loadingWrapper {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 350px;
-}
-
-#loading {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  border: 3px solid #d2d0d0;;
-  border-radius: 50%;
-  border-top-color: #383838;
-  animation: spin 1s ease-in-out infinite;
-  -webkit-animation: spin 1s ease-in-out infinite;
-}
-
-@keyframes spin {
-  to { -webkit-transform: rotate(360deg); }
-}
-@-webkit-keyframes spin {
-  to { -webkit-transform: rotate(360deg); }
-}
-</style>
-
-<div id="paginator">
-    <button id="prev">Previous</button>
-    <button id="next">Next</button>
-    &nbsp; &nbsp;
-    <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
-</div>
-<div id="embed-pdf-container">
-    <div id="loadingWrapper">
-      <div id="loading"></div>
+  #embed-pdf-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 20vh;
+     
+  }
+  
+  .pdf-canvas {
+    border: 1px solid black;
+    direction: ltr;
+    width: 100%;
+    height: auto;
+    display: none;
+  }
+  
+  #the-canvas {
+    border: 1px solid black;
+    direction: ltr;
+    width: 100%;
+    height: auto;
+    display: none;
+  }
+  
+  
+  .pdf-loadingWrapper {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 350px;
+  }
+  
+  .pdf-loading {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #d2d0d0;;
+    border-radius: 50%;
+    border-top-color: #383838;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+  }
+  
+  
+  
+  
+  
+  #overlayText {
+    word-wrap: break-word;
+    display: grid;
+    justify-content: end;
+  }
+  
+  #overlayText a {
+    position: relative;
+    top: 10px;
+    right: 4px;
+    color: #000;
+    margin: auto;
+    background-color: #eeeeee;
+    padding: 0.3em 1em;
+    border: solid 2px;
+    border-radius: 12px;
+    border-color: #00000030;
+    text-decoration: none;
+  }
+  
+  #overlayText svg {
+    height: clamp(1em, 2vw, 1.4em);
+    width:  clamp(1em, 2vw, 1.4em);
+  }
+  
+  
+  
+  @keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+  }
+  @-webkit-keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+  }
+  </style><div class="embed-pdf-container" id="embed-pdf-container-83974330">
+    <div class="pdf-loadingWrapper" id="pdf-loadingWrapper-83974330">
+        <div class="pdf-loading" id="pdf-loading-83974330"></div>
     </div>
-    <canvas id="the-canvas"></canvas>
+    <div id="overlayText">
+      <a href="./main.pdf" aria-label="Download" download>
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+            <path d="M9 13c.3 0 .5-.1.7-.3L15.4 7 14 5.6l-4 4V1H8v8.6l-4-4L2.6 7l5.7 5.7c.2.2.4.3.7.3zm-7 2h14v2H2z" />
+        </svg>
+      </a>
+    </div>
+    <canvas class="pdf-canvas" id="pdf-canvas-83974330"></canvas>
 </div>
+
+<div class="pdf-paginator" id="pdf-paginator-83974330">
+    <button id="pdf-prev-83974330">Previous</button>
+    <button id="pdf-next-83974330">Next</button> &nbsp; &nbsp;
+    <span>
+      <span class="pdf-pagenum" id="pdf-pagenum-83974330"></span> / <span class="pdf-pagecount" id="pdf-pagecount-83974330"></span>
+    </span>
+    <a class="pdf-source" id="pdf-source-83974330" href="./main.pdf">[pdf]</a>
+</div>
+
+<noscript>
+View the PDF file <a class="pdf-source" id="pdf-source-noscript-83974330" href="./main.pdf">here</a>.
+</noscript>
 
 <script type="text/javascript">
-window.onload = function() {
+    (function(){
+    var url = '.\/main.pdf';
 
-
-var url = "" + '.\/hugo-embed-pdf-sample.pdf';
-
-var hidePaginator = "" === "true";
-var hideLoader = "" === "true";
-var selectedPageNum = parseInt("") || 1;
-
-
-var pdfjsLib = window['pdfjs-dist/build/pdf'];
-
-
-pdfjsLib.GlobalWorkerOptions.workerSrc = "" + '/js/pdf-js/build/pdf.worker.js';
-
-
-var pdfDoc = null,
-    pageNum = selectedPageNum,
-    pageRendering = false,
-    pageNumPending = null,
-    scale = 3,
-    canvas = document.getElementById('the-canvas'),
-    ctx = canvas.getContext('2d'),
-    paginator = document.getElementById("paginator"),
-    loadingWrapper = document.getElementById('loadingWrapper');
-
-
-
-showPaginator();
-showLoader();
-
-
-
-function renderPage(num) {
-  pageRendering = true;
-  
-  pdfDoc.getPage(num).then(function(page) {
-    var viewport = page.getViewport({scale: scale});
-    canvas.height = viewport.height;
-    canvas.width = viewport.width;
+    var hidePaginator = "" === "true";
+    var hideLoader = "" === "true";
+    var selectedPageNum = parseInt("") || 1;
 
     
-    var renderContext = {
-      canvasContext: ctx,
-      viewport: viewport
-    };
-    var renderTask = page.render(renderContext);
+    var pdfjsLib = window['pdfjs-dist/build/pdf'];
 
     
-    renderTask.promise.then(function() {
-      pageRendering = false;
-      showContent();
+    if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+      pdfjsLib.GlobalWorkerOptions.workerSrc = "\/\/localhost:1313\/" + 'js/pdf-js/build/pdf.worker.js';
+
+    
+    var pdfDoc = null,
+        pageNum = selectedPageNum,
+        pageRendering = false,
+        pageNumPending = null,
+        scale = 3,
+        canvas = document.getElementById('pdf-canvas-83974330'),
+        ctx = canvas.getContext('2d'),
+        paginator = document.getElementById("pdf-paginator-83974330"),
+        loadingWrapper = document.getElementById('pdf-loadingWrapper-83974330');
+
+
+    
+    showPaginator();
+    showLoader();
+
+    
+
+    function renderPage(num) {
+      pageRendering = true;
       
-      if (pageNumPending !== null) {
+      pdfDoc.getPage(num).then(function(page) {
+        var viewport = page.getViewport({scale: scale});
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+
         
-        renderPage(pageNumPending);
-        pageNumPending = null;
+        var renderContext = {
+          canvasContext: ctx,
+          viewport: viewport
+        };
+        var renderTask = page.render(renderContext);
+
+        
+        renderTask.promise.then(function() {
+          pageRendering = false;
+          showContent();
+
+          if (pageNumPending !== null) {
+            
+            renderPage(pageNumPending);
+            pageNumPending = null;
+          }
+        });
+      });
+
+      
+      document.getElementById('pdf-pagenum-83974330').textContent = num;
+    }
+
+    
+
+    function showContent() {
+      loadingWrapper.style.display = 'none';
+      canvas.style.display = 'block';
+    }
+
+    
+
+    function showLoader() {
+      if(hideLoader) return
+      loadingWrapper.style.display = 'flex';
+      canvas.style.display = 'none';
+    }
+
+    
+
+    function showPaginator() {
+      if(hidePaginator) return
+      paginator.style.display = 'block';
+    }
+
+    
+
+    function queueRenderPage(num) {
+      if (pageRendering) {
+        pageNumPending = num;
+      } else {
+        renderPage(num);
       }
+    }
+
+    
+
+    function onPrevPage() {
+      if (pageNum <= 1) {
+        return;
+      }
+      pageNum--;
+      queueRenderPage(pageNum);
+    }
+    document.getElementById('pdf-prev-83974330').addEventListener('click', onPrevPage);
+
+    
+
+    function onNextPage() {
+      if (pageNum >= pdfDoc.numPages) {
+        return;
+      }
+      pageNum++;
+      queueRenderPage(pageNum);
+    }
+    document.getElementById('pdf-next-83974330').addEventListener('click', onNextPage);
+
+    
+
+    pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+      pdfDoc = pdfDoc_;
+      var numPages = pdfDoc.numPages;
+      document.getElementById('pdf-pagecount-83974330').textContent = numPages;
+
+      
+      if(pageNum > numPages) {
+        pageNum = numPages
+      }
+
+      
+      renderPage(pageNum);
     });
-  });
-
-  
-  document.getElementById('page_num').textContent = num;
-}
-
-
-
-function showContent() {
-  loadingWrapper.style.display = 'none';
-  canvas.style.display = 'block';
-}
-
-
-
-function showLoader() {
-  if(hideLoader) return
-  loadingWrapper.style.display = 'flex';
-  canvas.style.display = 'none';
-}
-
-
-
-function showPaginator() {
-  if(hidePaginator) return
-  paginator.style.display = 'block';
-}
-
-
-
-function queueRenderPage(num) {
-  if (pageRendering) {
-    pageNumPending = num;
-  } else {
-    renderPage(num);
-  }
-}
-
-
-
-function onPrevPage() {
-  if (pageNum <= 1) {
-    return;
-  }
-  pageNum--;
-  queueRenderPage(pageNum);
-}
-document.getElementById('prev').addEventListener('click', onPrevPage);
-
-
-
-function onNextPage() {
-  if (pageNum >= pdfDoc.numPages) {
-    return;
-  }
-  pageNum++;
-  queueRenderPage(pageNum);
-}
-document.getElementById('next').addEventListener('click', onNextPage);
-
-
-
-pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
-  pdfDoc = pdfDoc_;
-  var numPages = pdfDoc.numPages;
-  document.getElementById('page_count').textContent = numPages;
-  
-  
-  if(pageNum > numPages) {
-    pageNum = numPages
-  }
-
-  
-  renderPage(pageNum);
-});
-}
-
+    })();
 </script>
 
 </section>
@@ -502,11 +626,33 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
   
   
   
+  
+  <nav
+    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg !leading-[1.2] *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
+  >
+    
+    <a class="ltr:pr-3 rtl:pl-3" href="//localhost:1313/post/proxy/"
+      ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>Windows 下为某些特殊应用配置系统代理</span></a
+    >
+    
+    
+    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="//localhost:1313/post/lsjh2/"
+      ><span>剖分正方形为奇数个等面积的三角形</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
 
   
   
 
   
+
+
   
 </article>
 
@@ -514,21 +660,22 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
     </main>
 
     <footer
-  class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+  class="mx-auto flex h-[4.5rem] max-w-[--w] items-center px-8 text-xs uppercase tracking-wider opacity-60"
 >
   <div class="mr-auto">
-    &copy; 2023
-    <a class="link" href="">Charles IV</a>
+  
+    Copyright © 2023, Charles IV; all rights reserved.
+  
   </div>
   <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
-    >Powered by Hugo️️</a
+    >powered by hugo️️</a
   >️
   <a
     class="link"
     href="https://github.com/nanxiaobei/hugo-paper"
     rel="noopener"
     target="_blank"
-    >▷ Paper 6</a
+    >hugo-paper</a
   >
 </footer>
 

@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
+
+
+
+
+
 
 
 
@@ -34,11 +39,12 @@
 
 
 <html
-  class="not-ready text-sm lg:text-base"
+  class="not-ready lg:text-base"
   style="--bg: #fff"
   lang="zh"
+  dir="ltr"
 >
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta
@@ -51,15 +57,24 @@
 
   
   <meta name="theme-color" />
+
   
-  <meta name="description" content="删除已经安装的 Clash Verge Service 管理员权限执行
-sc delete clash_verge_service 注册表中删除服务 计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\clash_verge_service 删除整个 \clash_verge_service.
-即可重新安装 若仍无法安装, 可以尝试程序目录中管理员权限执行 /resources/install-service.exe.
-参考 win11无法安装Clash Verge Service [BUG]win1122h2服务模式打不开,代理生效极慢meta核心 " />
-  <meta
-    name="author"
-    content=""
-  />
+  
+  
+  
+  <meta name="description" content="删除已经安装的 Clash Verge Service
+管理员权限执行
+sc delete clash_verge_service
+注册表中删除服务
+计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\clash_verge_service 删除整个 \clash_verge_service.
+即可重新安装
+若仍无法安装, 可以尝试程序目录中管理员权限执行 /resources/install-service.exe.
+参考
+
+win11无法安装Clash Verge Service
+[BUG]win1122h2服务模式打不开,代理生效极慢meta核心
+" />
+  <meta name="author" content="Charles" />
   
 
   
@@ -68,20 +83,16 @@ sc delete clash_verge_service 注册表中删除服务 计算机\HKEY_LOCAL_MACH
   
   
   
-  <link rel="preload stylesheet" as="style" href="/main.min.css" />
+  <link rel="preload stylesheet" as="style" href="//localhost:1313/main.min.css" />
 
   
-  <script
-    defer
-    src="highlight.min.js"
-    onload="hljs.initHighlightingOnLoad();"
-  ></script>
   
+  
+  
+  
+  <link rel="preload" as="image" href="//localhost:1313/theme.svg" />
 
   
-     
-  <link rel="preload" as="image" href="theme.png" />
-
   
   
   
@@ -90,116 +101,104 @@ sc delete clash_verge_service 注册表中删除服务 计算机\HKEY_LOCAL_MACH
   
 
   
-  <link rel="preload" as="image" href="github.svg" />
   
-  <link rel="preload" as="image" href="rss.svg" />
+  <link rel="preload" as="image" href="//localhost:1313/github.svg" />
   
-
-  
-  <link rel="icon" href="favicon.ico" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-
-  
-  <meta name="generator" content="Hugo 0.110.0">
-
+  <link rel="preload" as="image" href="//localhost:1313/rss.svg" />
   
   
 
   
   
-  
-  
-  
-  
-  
-  
-  
-  <meta property="og:title" content="Clash Verge 无法安装服务模式 (Clash Verge Service) 解决方案" />
-<meta property="og:description" content="删除已经安装的 Clash Verge Service 管理员权限执行
-sc delete clash_verge_service 注册表中删除服务 计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\clash_verge_service 删除整个 \clash_verge_service.
-即可重新安装 若仍无法安装, 可以尝试程序目录中管理员权限执行 /resources/install-service.exe.
-参考 win11无法安装Clash Verge Service [BUG]win1122h2服务模式打不开,代理生效极慢meta核心 " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="/post/clash_verge_service/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-11-19T13:46:02+08:00" />
-<meta property="article:modified_time" content="2023-11-19T13:46:02+08:00" />
-
-  
-  <meta itemprop="name" content="Clash Verge 无法安装服务模式 (Clash Verge Service) 解决方案">
-<meta itemprop="description" content="删除已经安装的 Clash Verge Service 管理员权限执行
-sc delete clash_verge_service 注册表中删除服务 计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\clash_verge_service 删除整个 \clash_verge_service.
-即可重新安装 若仍无法安装, 可以尝试程序目录中管理员权限执行 /resources/install-service.exe.
-参考 win11无法安装Clash Verge Service [BUG]win1122h2服务模式打不开,代理生效极慢meta核心 "><meta itemprop="datePublished" content="2023-11-19T13:46:02+08:00" />
-<meta itemprop="dateModified" content="2023-11-19T13:46:02+08:00" />
-<meta itemprop="wordCount" content="21">
-<meta itemprop="keywords" content="" />
-  
-  <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Clash Verge 无法安装服务模式 (Clash Verge Service) 解决方案"/>
-<meta name="twitter:description" content="删除已经安装的 Clash Verge Service 管理员权限执行
-sc delete clash_verge_service 注册表中删除服务 计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\clash_verge_service 删除整个 \clash_verge_service.
-即可重新安装 若仍无法安装, 可以尝试程序目录中管理员权限执行 /resources/install-service.exe.
-参考 win11无法安装Clash Verge Service [BUG]win1122h2服务模式打不开,代理生效极慢meta核心 "/>
-
-  
+  <script
+    defer
+    src="//localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
   
 
-  <script type="text/javascript"
-        async
-        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$'], ['\\\[','\\\]']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] }
-  }
-});
+  
+  
+  
+  
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"
+  integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"
+  integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+  crossorigin="anonymous"
+></script>
 
-MathJax.Hub.Queue(function() {
-    
-    
-    
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-});
+
+<script>
+  document.addEventListener('DOMContentLoaded', () =>
+    renderMathInElement(document.body, {
+      
+      
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+      ],
+      
+      throwOnError: false,
+    }),
+  );
 </script>
 
-<style>
-code.has-jax {
-    font: inherit;
-    font-size: 100%;
-    background: inherit;
-    border: inherit;
-    color: #515151;
-}
-</style>
+  
+  
+  
 
+  
+  <link
+    rel="icon"
+    href="//localhost:1313/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="//localhost:1313/apple-touch-icon.png"
+  />
+
+  
+  <meta name="generator" content="Hugo 0.136.5">
+
+  
+  
+  
 </head>
 
   <body class="text-black duration-200 ease-out dark:text-white">
-    <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
-  <div class="relative z-50 mr-auto flex items-center">
-    <a
-      class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold"
-      href=""
+    <header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
+  <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
+    <a class="-translate-y-[1px] text-2xl font-medium" href="//localhost:1313/"
       >Charles IV</a
     >
-    <a
-      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
-    ></a>
+    <div
+      class="btn-dark text-[0] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
   </div>
 
-  <a
-    class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
-  ></a>
+  <div
+    class="btn-menu relative z-50 ltr:-mr-8 rtl:-ml-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
 
   
+
   <script>
     
     const htmlClass = document.documentElement.classList;
@@ -215,7 +214,7 @@ code.has-jax {
 
     
     const metaTheme = document.querySelector('meta[name="theme-color"]');
-    const lightBg = `"#fff"`.replace(/"/g, '');
+    const lightBg = '#fff'.replace(/"/g, '');
     const setDark = (isDark) => {
       metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
       htmlClass[isDark ? 'add' : 'remove']('dark');
@@ -248,22 +247,22 @@ code.has-jax {
   >
     
     
-    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse">
       
       <a
-        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
         href="/about/"
         >About</a
       >
       
       <a
-        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
         href="/contact/"
         >Contact</a
       >
       
       <a
-        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
         href="/"
         >Home</a
       >
@@ -273,22 +272,28 @@ code.has-jax {
 
     
     <nav
-      class="mt-12 flex justify-center space-x-10 dark:invert lg:mt-0 lg:ml-12 lg:items-center lg:space-x-6"
+      class="mt-12 flex justify-center space-x-10 rtl:space-x-reverse dark:invert ltr:lg:ml-14 rtl:lg:mr-14 lg:mt-0 lg:items-center"
     >
       
       <a
-        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
         style="--url: url(./github.svg)"
-        href=" https://github.com/Charle4 "
+        href="https://github.com/Charle4"
         target="_blank"
-      ></a>
+        rel="me"
+      >
+        github
+      </a>
       
       <a
-        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
         style="--url: url(./rss.svg)"
-        href=" index.xml "
+        href="//localhost:1313/index.xml"
         target="_blank"
-      ></a>
+        rel="alternate"
+      >
+        rss
+      </a>
       
     </nav>
     
@@ -297,18 +302,20 @@ code.has-jax {
 
 
     <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-20 pb-32 dark:prose-invert"
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
     >
       
 
 <article>
-  <header class="mb-20">
+  <header class="mb-14">
     <h1 class="!my-0 pb-2.5">Clash Verge 无法安装服务模式 (Clash Verge Service) 解决方案</h1>
 
     
-    <div class="text-sm opacity-60">
+    <div class="text-xs antialiased opacity-60">
       
       <time>Nov 19, 2023</time>
+      
+      
       
       
     </div>
@@ -335,22 +342,29 @@ code.has-jax {
   
   
   
-  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+  
+  <nav
+    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg !leading-[1.2] *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
+  >
     
     
-    <a
-      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 no-underline hover:bg-black/[2%]"
-      href="/post/ln/"
-      ><span>Learning Notes</span><span class="ml-1.5">→</span></a
+    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="//localhost:1313/post/latex-vscode/"
+      ><span>VSCode 编辑 LaTeX 配置</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
     >
     
   </nav>
   
+  
+
+  
+  
 
   
   
 
   
+
+
   
 </article>
 
@@ -358,21 +372,22 @@ code.has-jax {
     </main>
 
     <footer
-  class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+  class="mx-auto flex h-[4.5rem] max-w-[--w] items-center px-8 text-xs uppercase tracking-wider opacity-60"
 >
   <div class="mr-auto">
-    &copy; 2023
-    <a class="link" href="">Charles IV</a>
+  
+    Copyright © 2023, Charles IV; all rights reserved.
+  
   </div>
   <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
-    >Powered by Hugo️️</a
+    >powered by hugo️️</a
   >️
   <a
     class="link"
     href="https://github.com/nanxiaobei/hugo-paper"
     rel="noopener"
     target="_blank"
-    >▷ Paper 6</a
+    >hugo-paper</a
   >
 </footer>
 
