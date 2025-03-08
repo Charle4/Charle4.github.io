@@ -1,0 +1,528 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #fff"
+  lang="zh"
+  dir="ltr"
+>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>使用 FRP 内网穿透使用 Windows 远程桌面连接 - Charles IV</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="FRP: https://github.com/fatedier/frp
+下载对应版本的 FRP 并解压, 如 frp_x.x.x_windows_amd64.zip 或 frp_x.x.x_linux_amd64.tar.gz, 每个版本的压缩包内均包含相应的服务端和客户端程序, frps 为服务端程序, frpc 为客户端程序.
+如: 下载
+wget https://github.com/fatedier/frp/releases/download/v0.61.2/frp_0.61.2_linux_amd64.tar.gz
+解压
+tar -zxvf frp_0.61.2_linux_amd64.tar.gz
+服务端配置 frps.toml
+# 基础配置
+bindPort = 7000
+
+# 可选：如果需要dashboard
+webServer.port = 7500
+webServer.user = &#34;admin&#34; 
+webServer.password = &#34;admin123&#34;
+
+# 可选：设置认证token
+auth.token = &#34;12345678&#34;
+可以通过
+./frps verify -c ./frps.toml
+验证配置文件格式是否正确.
+利用 systemd 开机自启动
+创建 systemd 服务配置文件:
+sudo vim /etc/systemd/system/frps.service
+[Unit]
+Description = frp server
+After = network.target syslog.target
+Wants = network.target
+
+[Service]
+Type = simple
+ExecStart = ~/frps -c ~/frps.toml
+
+[Install]
+WantedBy = multi-user.target
+重新加载 systemd 配置" />
+  <meta name="author" content="Charles" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="/theme.svg" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://github.com/Charle4/Image-Hosting-Service/blob/main/20230207/image.49gxhl9trh60.jpg?raw=true" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="/github.svg" />
+  
+  <link rel="preload" as="image" href="/rss.svg" />
+  
+  
+
+  
+  
+  <script
+    defer
+    src="/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+  
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"
+  integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"
+  integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+  crossorigin="anonymous"
+></script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () =>
+    renderMathInElement(document.body, {
+      
+      
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+      ],
+      
+      throwOnError: false,
+    }),
+  );
+</script>
+
+  
+  
+  
+
+  
+  <link
+    rel="icon"
+    href="/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="/apple-touch-icon.png"
+  />
+
+  
+  <meta name="generator" content="Hugo 0.136.5">
+
+  
+  
+  
+  
+  
+  
+  <meta itemprop="name" content="使用 FRP 内网穿透使用 Windows 远程桌面连接">
+  <meta itemprop="description" content="FRP: https://github.com/fatedier/frp
+下载对应版本的 FRP 并解压, 如 frp_x.x.x_windows_amd64.zip 或 frp_x.x.x_linux_amd64.tar.gz, 每个版本的压缩包内均包含相应的服务端和客户端程序, frps 为服务端程序, frpc 为客户端程序.
+如: 下载
+wget https://github.com/fatedier/frp/releases/download/v0.61.2/frp_0.61.2_linux_amd64.tar.gz 解压
+tar -zxvf frp_0.61.2_linux_amd64.tar.gz 服务端配置 frps.toml # 基础配置 bindPort = 7000 # 可选：如果需要dashboard webServer.port = 7500 webServer.user = &#34;admin&#34; webServer.password = &#34;admin123&#34; # 可选：设置认证token auth.token = &#34;12345678&#34; 可以通过
+./frps verify -c ./frps.toml 验证配置文件格式是否正确.
+利用 systemd 开机自启动 创建 systemd 服务配置文件:
+sudo vim /etc/systemd/system/frps.service [Unit] Description = frp server After = network.target syslog.target Wants = network.target [Service] Type = simple ExecStart = ~/frps -c ~/frps.toml [Install] WantedBy = multi-user.target 重新加载 systemd 配置">
+  <meta itemprop="datePublished" content="2025-03-08T00:00:16+08:00">
+  <meta itemprop="dateModified" content="2025-03-08T00:00:16+08:00">
+  <meta itemprop="wordCount" content="181">
+  
+  <meta property="og:url" content="/post/frp/">
+  <meta property="og:site_name" content="Charles IV">
+  <meta property="og:title" content="使用 FRP 内网穿透使用 Windows 远程桌面连接">
+  <meta property="og:description" content="FRP: https://github.com/fatedier/frp
+下载对应版本的 FRP 并解压, 如 frp_x.x.x_windows_amd64.zip 或 frp_x.x.x_linux_amd64.tar.gz, 每个版本的压缩包内均包含相应的服务端和客户端程序, frps 为服务端程序, frpc 为客户端程序.
+如: 下载
+wget https://github.com/fatedier/frp/releases/download/v0.61.2/frp_0.61.2_linux_amd64.tar.gz 解压
+tar -zxvf frp_0.61.2_linux_amd64.tar.gz 服务端配置 frps.toml # 基础配置 bindPort = 7000 # 可选：如果需要dashboard webServer.port = 7500 webServer.user = &#34;admin&#34; webServer.password = &#34;admin123&#34; # 可选：设置认证token auth.token = &#34;12345678&#34; 可以通过
+./frps verify -c ./frps.toml 验证配置文件格式是否正确.
+利用 systemd 开机自启动 创建 systemd 服务配置文件:
+sudo vim /etc/systemd/system/frps.service [Unit] Description = frp server After = network.target syslog.target Wants = network.target [Service] Type = simple ExecStart = ~/frps -c ~/frps.toml [Install] WantedBy = multi-user.target 重新加载 systemd 配置">
+  <meta property="og:locale" content="zh">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2025-03-08T00:00:16+08:00">
+    <meta property="article:modified_time" content="2025-03-08T00:00:16+08:00">
+
+  
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="使用 FRP 内网穿透使用 Windows 远程桌面连接">
+  <meta name="twitter:description" content="FRP: https://github.com/fatedier/frp
+下载对应版本的 FRP 并解压, 如 frp_x.x.x_windows_amd64.zip 或 frp_x.x.x_linux_amd64.tar.gz, 每个版本的压缩包内均包含相应的服务端和客户端程序, frps 为服务端程序, frpc 为客户端程序.
+如: 下载
+wget https://github.com/fatedier/frp/releases/download/v0.61.2/frp_0.61.2_linux_amd64.tar.gz 解压
+tar -zxvf frp_0.61.2_linux_amd64.tar.gz 服务端配置 frps.toml # 基础配置 bindPort = 7000 # 可选：如果需要dashboard webServer.port = 7500 webServer.user = &#34;admin&#34; webServer.password = &#34;admin123&#34; # 可选：设置认证token auth.token = &#34;12345678&#34; 可以通过
+./frps verify -c ./frps.toml 验证配置文件格式是否正确.
+利用 systemd 开机自启动 创建 systemd 服务配置文件:
+sudo vim /etc/systemd/system/frps.service [Unit] Description = frp server After = network.target syslog.target Wants = network.target [Service] Type = simple ExecStart = ~/frps -c ~/frps.toml [Install] WantedBy = multi-user.target 重新加载 systemd 配置">
+
+  
+  
+
+  
+  <link rel="canonical" href="/post/frp/" />
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
+  <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
+    <a class="-translate-y-[1px] text-2xl font-medium" href="/"
+      >Charles IV</a
+    >
+    <div
+      class="btn-dark text-[0] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 ltr:-mr-8 rtl:-ml-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#fff'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse">
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about/"
+        >About</a
+      >
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/contact/"
+        >Contact</a
+      >
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/"
+        >Home</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 rtl:space-x-reverse dark:invert ltr:lg:ml-14 rtl:lg:mr-14 lg:mt-0 lg:items-center"
+    >
+      
+      <a
+        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/Charle4"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./rss.svg)"
+        href="/index.xml"
+        target="_blank"
+        rel="alternate"
+      >
+        rss
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-14">
+    <h1 class="!my-0 pb-2.5">使用 FRP 内网穿透使用 Windows 远程桌面连接</h1>
+
+    
+    <div class="text-xs antialiased opacity-60">
+      
+      <time>Mar 8, 2025</time>
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>FRP: <a href="https://github.com/fatedier/frp">https://github.com/fatedier/frp</a></p>
+<p>下载对应版本的 FRP 并解压, 如 <code>frp_x.x.x_windows_amd64.zip</code> 或 <code>frp_x.x.x_linux_amd64.tar.gz</code>, 每个版本的压缩包内均包含相应的服务端和客户端程序, frps 为服务端程序, frpc 为客户端程序.</p>
+<p>如: 下载</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget https://github.com/fatedier/frp/releases/download/v0.61.2/frp_0.61.2_linux_amd64.tar.gz
+</span></span></code></pre></div><p>解压</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>tar -zxvf frp_0.61.2_linux_amd64.tar.gz
+</span></span></code></pre></div><h3 id="服务端配置-frpstoml">服务端配置 <code>frps.toml</code></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#75715e"># 基础配置</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">bindPort</span> = <span style="color:#ae81ff">7000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 可选：如果需要dashboard</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">webServer</span>.<span style="color:#a6e22e">port</span> = <span style="color:#ae81ff">7500</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">webServer</span>.<span style="color:#a6e22e">user</span> = <span style="color:#e6db74">&#34;admin&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">webServer</span>.<span style="color:#a6e22e">password</span> = <span style="color:#e6db74">&#34;admin123&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 可选：设置认证token</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">auth</span>.<span style="color:#a6e22e">token</span> = <span style="color:#e6db74">&#34;12345678&#34;</span>
+</span></span></code></pre></div><p>可以通过</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./frps verify -c ./frps.toml
+</span></span></code></pre></div><p>验证配置文件格式是否正确.</p>
+<h4 id="利用-systemd-开机自启动">利用 systemd 开机自启动</h4>
+<p>创建 systemd 服务配置文件:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo vim /etc/systemd/system/frps.service
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#66d9ef">[Unit]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Description</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">frp server</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">After</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">network.target syslog.target</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Wants</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">network.target</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[Service]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Type</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">simple</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ExecStart</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">~/frps -c ~/frps.toml</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[Install]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">WantedBy</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">multi-user.target</span>
+</span></span></code></pre></div><p>重新加载 systemd 配置</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl daemon-reload
+</span></span></code></pre></div><p>启动 frps 服务</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl start frps
+</span></span></code></pre></div><p>设置开机自启动</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl enable frps
+</span></span></code></pre></div><ul>
+<li>查看服务状态 <code>sudo systemctl start frps</code></li>
+<li>停止服务 <code>sudo systemctl stop frps</code></li>
+<li>重启服务 <code>sudo systemctl restart frps</code></li>
+<li>查看日志 <code>sudo journalctl -u frps</code></li>
+</ul>
+<p>如果修改 frps 的配置文件, 需要在修改后重启服务</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl restart frps
+</span></span></code></pre></div><h3 id="客户端配置-frpctoml">客户端配置 <code>frpc.toml</code></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#75715e"># 服务器连接设置</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">serverAddr</span> = <span style="color:#e6db74">&#34;your_server_ip&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">serverPort</span> = <span style="color:#ae81ff">7000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果服务端设置了token，这里也需要设置</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">auth</span>.<span style="color:#a6e22e">token</span> = <span style="color:#e6db74">&#34;12345678&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 远程桌面代理配置</span>
+</span></span><span style="display:flex;"><span>[[<span style="color:#a6e22e">proxies</span>]]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;RDP&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">type</span> = <span style="color:#e6db74">&#34;tcp&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">localIP</span> = <span style="color:#e6db74">&#34;127.0.0.1&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">localPort</span> = <span style="color:#ae81ff">3389</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">remotePort</span> = <span style="color:#ae81ff">6000</span>  <span style="color:#75715e"># 这个端口可以自定义，访问时使用</span>
+</span></span></code></pre></div><p>可以通过</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>frpc verify -c ./frpc.toml
+</span></span></code></pre></div><p>验证配置文件格式是否正确.</p>
+<p>在内网 Windows 电脑上运行</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>frpc -c ./frpc.toml
+</span></span></code></pre></div><p>就可以通过 <code>server_ip:6000</code> 访问远程桌面</p>
+</section>
+
+  
+  
+
+  
+  
+  
+  
+  <nav
+    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg !leading-[1.2] *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
+  >
+    
+    
+    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="/post/clash_verge_service/"
+      ><span>Clash Verge 无法安装服务模式 (Clash Verge Service) 解决方案</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="mx-auto flex h-[4.5rem] max-w-[--w] items-center px-8 text-xs uppercase tracking-wider opacity-60"
+>
+  <div class="mr-auto">
+  
+    Copyright © 2023, Charles IV; all rights reserved.
+  
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >powered by hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >hugo-paper</a
+  >
+</footer>
+
+  </body>
+</html>
