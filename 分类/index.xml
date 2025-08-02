@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>分类 on Charles IV</title>
-    <link>/%E5%88%86%E7%B1%BB/</link>
+    <link>//localhost:1313/%E5%88%86%E7%B1%BB/</link>
     <description>Recent content in 分类 on Charles IV</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <copyright>Copyright © 2023, Charles IV; all rights reserved.</copyright>
-    <atom:link href="/%E5%88%86%E7%B1%BB/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/%E5%88%86%E7%B1%BB/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
