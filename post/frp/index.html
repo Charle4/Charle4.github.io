@@ -44,7 +44,7 @@
   lang="zh"
   dir="ltr"
 >
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta
@@ -106,14 +106,14 @@ WantedBy = multi-user.target
   
   
   
-  <link rel="preload stylesheet" as="style" href="//localhost:1313/main.min.css" />
+  <link rel="preload stylesheet" as="style" href="/main.min.css" />
 
   
   
   
   
   
-  <link rel="preload" as="image" href="//localhost:1313/theme.svg" />
+  <link rel="preload" as="image" href="/theme.svg" />
 
   
   
@@ -125,9 +125,9 @@ WantedBy = multi-user.target
 
   
   
-  <link rel="preload" as="image" href="//localhost:1313/github.svg" />
+  <link rel="preload" as="image" href="/github.svg" />
   
-  <link rel="preload" as="image" href="//localhost:1313/rss.svg" />
+  <link rel="preload" as="image" href="/rss.svg" />
   
   
 
@@ -135,7 +135,7 @@ WantedBy = multi-user.target
   
   <script
     defer
-    src="//localhost:1313/highlight.min.js"
+    src="/highlight.min.js"
     onload="hljs.initHighlightingOnLoad();"
   ></script>
   
@@ -186,11 +186,11 @@ WantedBy = multi-user.target
   
   <link
     rel="icon"
-    href="//localhost:1313/favicon.ico"
+    href="/favicon.ico"
   />
   <link
     rel="apple-touch-icon"
-    href="//localhost:1313/apple-touch-icon.png"
+    href="/apple-touch-icon.png"
   />
 
   
@@ -199,12 +199,65 @@ WantedBy = multi-user.target
   
   
   
+  
+  
+  
+  <meta itemprop="name" content="使用 FRP 内网穿透使用 Windows 远程桌面连接">
+  <meta itemprop="description" content="FRP: https://github.com/fatedier/frp
+下载对应版本的 FRP 并解压, 如 frp_x.x.x_windows_amd64.zip 或 frp_x.x.x_linux_amd64.tar.gz, 每个版本的压缩包内均包含相应的服务端和客户端程序, frps 为服务端程序, frpc 为客户端程序.
+如: 下载
+wget https://github.com/fatedier/frp/releases/download/v0.61.2/frp_0.61.2_linux_amd64.tar.gz 解压
+tar -zxvf frp_0.61.2_linux_amd64.tar.gz 服务端配置 frps.toml # 基础配置 bindPort = 7000 # 可选：如果需要dashboard webServer.port = 7500 webServer.user = &#34;admin&#34; webServer.password = &#34;admin123&#34; # 可选：设置认证token auth.token = &#34;12345678&#34; 可以通过
+./frps verify -c ./frps.toml 验证配置文件格式是否正确.
+利用 systemd 开机自启动 创建 systemd 服务配置文件:
+sudo vim /etc/systemd/system/frps.service [Unit] Description = frp server After = network.target syslog.target Wants = network.target [Service] Type = simple ExecStart = ~/frps -c ~/frps.toml [Install] WantedBy = multi-user.target 重新加载 systemd 配置">
+  <meta itemprop="datePublished" content="2025-03-08T00:00:16+08:00">
+  <meta itemprop="dateModified" content="2025-03-08T00:00:16+08:00">
+  <meta itemprop="wordCount" content="181">
+  
+  <meta property="og:url" content="/post/frp/">
+  <meta property="og:site_name" content="Charles IV">
+  <meta property="og:title" content="使用 FRP 内网穿透使用 Windows 远程桌面连接">
+  <meta property="og:description" content="FRP: https://github.com/fatedier/frp
+下载对应版本的 FRP 并解压, 如 frp_x.x.x_windows_amd64.zip 或 frp_x.x.x_linux_amd64.tar.gz, 每个版本的压缩包内均包含相应的服务端和客户端程序, frps 为服务端程序, frpc 为客户端程序.
+如: 下载
+wget https://github.com/fatedier/frp/releases/download/v0.61.2/frp_0.61.2_linux_amd64.tar.gz 解压
+tar -zxvf frp_0.61.2_linux_amd64.tar.gz 服务端配置 frps.toml # 基础配置 bindPort = 7000 # 可选：如果需要dashboard webServer.port = 7500 webServer.user = &#34;admin&#34; webServer.password = &#34;admin123&#34; # 可选：设置认证token auth.token = &#34;12345678&#34; 可以通过
+./frps verify -c ./frps.toml 验证配置文件格式是否正确.
+利用 systemd 开机自启动 创建 systemd 服务配置文件:
+sudo vim /etc/systemd/system/frps.service [Unit] Description = frp server After = network.target syslog.target Wants = network.target [Service] Type = simple ExecStart = ~/frps -c ~/frps.toml [Install] WantedBy = multi-user.target 重新加载 systemd 配置">
+  <meta property="og:locale" content="zh">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2025-03-08T00:00:16+08:00">
+    <meta property="article:modified_time" content="2025-03-08T00:00:16+08:00">
+
+  
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="使用 FRP 内网穿透使用 Windows 远程桌面连接">
+  <meta name="twitter:description" content="FRP: https://github.com/fatedier/frp
+下载对应版本的 FRP 并解压, 如 frp_x.x.x_windows_amd64.zip 或 frp_x.x.x_linux_amd64.tar.gz, 每个版本的压缩包内均包含相应的服务端和客户端程序, frps 为服务端程序, frpc 为客户端程序.
+如: 下载
+wget https://github.com/fatedier/frp/releases/download/v0.61.2/frp_0.61.2_linux_amd64.tar.gz 解压
+tar -zxvf frp_0.61.2_linux_amd64.tar.gz 服务端配置 frps.toml # 基础配置 bindPort = 7000 # 可选：如果需要dashboard webServer.port = 7500 webServer.user = &#34;admin&#34; webServer.password = &#34;admin123&#34; # 可选：设置认证token auth.token = &#34;12345678&#34; 可以通过
+./frps verify -c ./frps.toml 验证配置文件格式是否正确.
+利用 systemd 开机自启动 创建 systemd 服务配置文件:
+sudo vim /etc/systemd/system/frps.service [Unit] Description = frp server After = network.target syslog.target Wants = network.target [Service] Type = simple ExecStart = ~/frps -c ~/frps.toml [Install] WantedBy = multi-user.target 重新加载 systemd 配置">
+
+  
+  
+
+  
+  <link rel="canonical" href="/post/frp/" />
+  
+  
 </head>
 
   <body class="text-black duration-200 ease-out dark:text-white">
     <header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
   <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
-    <a class="-translate-y-[1px] text-2xl font-medium" href="//localhost:1313/"
+    <a class="-translate-y-[1px] text-2xl font-medium" href="/"
       >Charles IV</a
     >
     <div
@@ -311,7 +364,7 @@ WantedBy = multi-user.target
       <a
         class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
         style="--url: url(./rss.svg)"
-        href="//localhost:1313/index.xml"
+        href="/index.xml"
         target="_blank"
         rel="alternate"
       >
@@ -428,7 +481,7 @@ WantedBy = multi-user.target
   >
     
     
-    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="//localhost:1313/post/clash_verge_service/"
+    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="/post/clash_verge_service/"
       ><span>Clash Verge 无法安装服务模式 (Clash Verge Service) 解决方案</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
     >
     
